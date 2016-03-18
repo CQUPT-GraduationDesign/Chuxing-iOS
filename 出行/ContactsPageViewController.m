@@ -7,10 +7,46 @@
 //
 
 #import "ContactsPageViewController.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
-@interface ContactsPageViewController ()
+typedef NS_ENUM(NSInteger, LoginShowType) {
+    LoginShowTypeNone,
+    LoginShowTypeUser,
+    LoginShowTypePassword
+};
+
+const static CGFloat offsetHand = 60;
+
+@interface ContactsPageViewController ()<UITextFieldDelegate> {
+    
+    LoginShowType showType;
+
+}
+
 @property (weak, nonatomic) IBOutlet UITextField *userNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+
+@property (weak, nonatomic) IBOutlet UIImageView *rightHandShow;
+@property (weak, nonatomic) IBOutlet UIImageView *leftHandShow;
+@property (weak, nonatomic) IBOutlet UIImageView *rightHandHide;
+@property (weak, nonatomic) IBOutlet UIImageView *leftHandHide;
+
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *rightHandShowLeading;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *rightHandShowTop;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftHandShowTriling;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftHandShowTop;
+
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *rightHandHideTriling;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *rightHandHideHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *rightHandHideWidth;
+
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftHandHideLeading;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftHandHideHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftHandHideWidth;
 
 @end
 
@@ -23,6 +59,9 @@
     
     [self initTextFields];
     
+    self.userNameTextField.delegate = self;
+    self.passwordTextField.delegate = self;
+    showType = LoginShowTypeUser;
     
 }
 
@@ -40,6 +79,76 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - UITextFieldDelegate
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    
+    if ([textField isEqual:_userNameTextField]) {
+        
+        if (showType == LoginShowTypeUser) {
+            //showType = LoginShowTypeUser;
+            return;
+        }
+        showType = LoginShowTypeUser;
+        
+        [UIView animateWithDuration:0.5 animations:^{
+            _leftHandShowTriling.constant = _leftHandShowTriling.constant + 50;
+            _leftHandShowTop.constant = _leftHandShowTop.constant + 50;
+            
+            _rightHandShowLeading.constant = _rightHandShowLeading.constant + 50;
+            _rightHandShowTop.constant = _rightHandShowTop.constant + 50;
+            
+            
+            _rightHandHideTriling.constant = _rightHandHideTriling.constant + 70;
+            _rightHandHideWidth.constant = 40;
+            _rightHandHideHeight.constant = 40;
+            
+            _leftHandHideLeading.constant = _leftHandHideLeading.constant - 70;
+            _leftHandHideWidth.constant = 40;
+            _leftHandHideHeight.constant = 40;
+            
+            
+            [self.view layoutIfNeeded];
+        } completion:^(BOOL finished) {
+            
+        }];
+        
+    } else if ([textField isEqual:_passwordTextField]) {
+        
+        if (showType == LoginShowTypePassword) {
+            //showType = LoginShowTypePassword;
+            return;
+        }
+        showType = LoginShowTypePassword;
+        
+        [UIView animateWithDuration:0.5 animations:^{
+            // 移动档眼睛的手
+            _leftHandShowTriling.constant = _leftHandShowTriling.constant - 50;
+            _leftHandShowTop.constant = _leftHandShowTop.constant - 50;
+            
+            _rightHandShowLeading.constant = _rightHandShowLeading.constant - 50;
+            _rightHandShowTop.constant = _rightHandShowTop.constant - 50;
+            
+            // 移动放在旁边的手
+            _rightHandHideTriling.constant = _rightHandHideTriling.constant - 70;
+            _rightHandHideWidth.constant = 0;
+            _rightHandHideHeight.constant = 0;
+            
+            _leftHandHideLeading.constant = _leftHandHideLeading.constant + 70;
+            _leftHandHideWidth.constant = 0;
+            _leftHandHideHeight.constant = 0;
+            
+            
+            [self.view layoutIfNeeded];
+        } completion:^(BOOL finished) {
+            
+        }];
+        
+    }
+    
+    
+}
 
 
 #pragma mark - private methods

@@ -11,7 +11,6 @@
 		8235E0631C9B9D9900DF8EA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8235E0621C9B9D9900DF8EA2 /* main.m */; };
 		8235E0661C9B9D9900DF8EA2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8235E0651C9B9D9900DF8EA2 /* AppDelegate.m */; };
 		8235E06C1C9B9D9900DF8EA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8235E06A1C9B9D9900DF8EA2 /* Main.storyboard */; };
-		8235E06E1C9B9D9900DF8EA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8235E06D1C9B9D9900DF8EA2 /* Assets.xcassets */; };
 		8235E0711C9B9D9900DF8EA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8235E06F1C9B9D9900DF8EA2 /* LaunchScreen.storyboard */; };
 		8235E07A1C9B9FC400DF8EA2 /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8235E0781C9B9FC400DF8EA2 /* HomePage.storyboard */; };
 		8235E07D1C9B9FDE00DF8EA2 /* FavouritePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8235E07B1C9B9FDE00DF8EA2 /* FavouritePage.storyboard */; };
@@ -19,6 +18,7 @@
 		8235E0AD1C9BA2CD00DF8EA2 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8235E0AC1C9BA2CD00DF8EA2 /* HomePageViewController.m */; };
 		8235E0B01C9BA2EF00DF8EA2 /* FavourotePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8235E0AF1C9BA2EF00DF8EA2 /* FavourotePageViewController.m */; };
 		8235E0B31C9BA30400DF8EA2 /* ContactsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8235E0B21C9BA30400DF8EA2 /* ContactsPageViewController.m */; };
+		8235E0B51C9BAEF700DF8EA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8235E0B41C9BAEF700DF8EA2 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +30,6 @@
 		8235E0641C9B9D9900DF8EA2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8235E0651C9B9D9900DF8EA2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8235E06B1C9B9D9900DF8EA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8235E06D1C9B9D9900DF8EA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8235E0701C9B9D9900DF8EA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8235E0721C9B9D9900DF8EA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8235E0791C9B9FC400DF8EA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomePage.storyboard; sourceTree = "<group>"; };
@@ -42,6 +41,7 @@
 		8235E0AF1C9BA2EF00DF8EA2 /* FavourotePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavourotePageViewController.m; sourceTree = "<group>"; };
 		8235E0B11C9BA30400DF8EA2 /* ContactsPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsPageViewController.h; sourceTree = "<group>"; };
 		8235E0B21C9BA30400DF8EA2 /* ContactsPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsPageViewController.m; sourceTree = "<group>"; };
+		8235E0B41C9BAEF700DF8EA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +100,9 @@
 				8235E0A91C9BA26D00DF8EA2 /* FavouritePageControllers */,
 				8235E0AA1C9BA28200DF8EA2 /* ContactsPageViewControllers */,
 				8235E0A71C9BA23300DF8EA2 /* StoryBoards */,
-				8235E06D1C9B9D9900DF8EA2 /* Assets.xcassets */,
 				8235E06F1C9B9D9900DF8EA2 /* LaunchScreen.storyboard */,
 				8235E0721C9B9D9900DF8EA2 /* Info.plist */,
+				8235E0B41C9BAEF700DF8EA2 /* Assets.xcassets */,
 				8235E0611C9B9D9900DF8EA2 /* Supporting Files */,
 			);
 			path = "出行";
@@ -219,7 +219,7 @@
 				8235E0711C9B9D9900DF8EA2 /* LaunchScreen.storyboard in Resources */,
 				8235E0801C9BA00000DF8EA2 /* ContactsPage.storyboard in Resources */,
 				8235E07D1C9B9FDE00DF8EA2 /* FavouritePage.storyboard in Resources */,
-				8235E06E1C9B9D9900DF8EA2 /* Assets.xcassets in Resources */,
+				8235E0B51C9BAEF700DF8EA2 /* Assets.xcassets in Resources */,
 				8235E06C1C9B9D9900DF8EA2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

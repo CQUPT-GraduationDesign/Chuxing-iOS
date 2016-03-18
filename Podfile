@@ -1,3 +1,5 @@
 platform :ios, '8.0'
 
-pod "ReactiveCocoa", "2.1.8"
+pod 'AFNetworking', '~> 3.0'
+pod 'ReactiveCocoa', '~> 2.1.8'
+pod 'KMNavigationBarTransition', '~> 0.0.4'

@@ -7,15 +7,15 @@
 //
 
 #import "ContactsPageViewController.h"
+#import "ContactsViewModel.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveCocoa/RACEXTScope.h>
 
 typedef NS_ENUM(NSInteger, LoginShowType) {
     LoginShowTypeNone,
     LoginShowTypeUser,
     LoginShowTypePassword
 };
-
-const static CGFloat offsetHand = 60;
 
 @interface ContactsPageViewController ()<UITextFieldDelegate> {
     
@@ -48,6 +48,13 @@ const static CGFloat offsetHand = 60;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftHandHideHeight;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftHandHideWidth;
 
+
+@property (weak, nonatomic) IBOutlet UIButton *logintn;
+@property (weak, nonatomic) IBOutlet UIButton *registerBtn;
+@property (weak, nonatomic) IBOutlet UIButton *forgetPswBtn;
+
+@property (nonatomic, strong, readwrite) ContactsViewModel *viewModel;
+
 @end
 
 @implementation ContactsPageViewController
@@ -56,12 +63,25 @@ const static CGFloat offsetHand = 60;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    if (self.viewModel == nil) {
+        self.viewModel = [[ContactsViewModel alloc] init];
+        [self.viewModel initialize];
+    }
+    
+    [self bindViewModel];
+
     
     [self initTextFields];
     
     self.userNameTextField.delegate = self;
     self.passwordTextField.delegate = self;
     showType = LoginShowTypeUser;
+    
+    self.logintn.layer.masksToBounds = YES;
+    self.logintn.layer.cornerRadius = 5;
+    
+    
+    
     
 }
 
@@ -80,7 +100,14 @@ const static CGFloat offsetHand = 60;
 }
 */
 
+
+
 #pragma mark - UITextFieldDelegate
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.userNameTextField resignFirstResponder];
+    [self.passwordTextField resignFirstResponder];
+}
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     
@@ -171,6 +198,23 @@ const static CGFloat offsetHand = 60;
     self.passwordTextField.leftViewMode = UITextFieldViewModeAlways;
     self.passwordTextField.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.passwordTextField.frame.size.height, self.passwordTextField.frame.size.height)];
     [self.passwordTextField.leftView addSubview:passwordImageView];
+}
+
+
+- (void)bindViewModel {
+    
+    
+    @weakify(self)
+
+    RAC(self.viewModel,username) = [self.userNameTextField rac_textSignal];
+    RAC(self.viewModel, password) = [self.passwordTextField rac_textSignal];
+    RAC(self.logintn, enabled) = self.viewModel.validLoginSignal;
+    
+    [[self.logintn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        @strongify(self)
+        [self.viewModel.loginCommand execute:nil];
+    }];
+    
 }
 
 

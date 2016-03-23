@@ -19,6 +19,11 @@
 		8235E0B01C9BA2EF00DF8EA2 /* FavourotePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8235E0AF1C9BA2EF00DF8EA2 /* FavourotePageViewController.m */; };
 		8235E0B31C9BA30400DF8EA2 /* ContactsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8235E0B21C9BA30400DF8EA2 /* ContactsPageViewController.m */; };
 		8235E0B51C9BAEF700DF8EA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8235E0B41C9BAEF700DF8EA2 /* Assets.xcassets */; };
+		8235E0CB1C9FE30F00DF8EA2 /* ContactsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8235E0CA1C9FE30F00DF8EA2 /* ContactsViewModel.m */; };
+		82E4AFC71CA2796A00B9D608 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E4AFC51CA2796A00B9D608 /* RegisterViewController.m */; };
+		82E4AFC81CA2796A00B9D608 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82E4AFC61CA2796A00B9D608 /* RegisterViewController.xib */; };
+		82E4AFD21CA2C90C00B9D608 /* LXNetworkKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E4AFD11CA2C90C00B9D608 /* LXNetworkKit.m */; };
+		82E4AFD51CA2CB8F00B9D608 /* LXNetworkKit+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E4AFD41CA2CB8F00B9D608 /* LXNetworkKit+Login.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +47,15 @@
 		8235E0B11C9BA30400DF8EA2 /* ContactsPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsPageViewController.h; sourceTree = "<group>"; };
 		8235E0B21C9BA30400DF8EA2 /* ContactsPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsPageViewController.m; sourceTree = "<group>"; };
 		8235E0B41C9BAEF700DF8EA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8235E0C91C9FE30F00DF8EA2 /* ContactsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsViewModel.h; sourceTree = "<group>"; };
+		8235E0CA1C9FE30F00DF8EA2 /* ContactsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsViewModel.m; sourceTree = "<group>"; };
+		82E4AFC41CA2796A00B9D608 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		82E4AFC51CA2796A00B9D608 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		82E4AFC61CA2796A00B9D608 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		82E4AFD01CA2C90C00B9D608 /* LXNetworkKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXNetworkKit.h; sourceTree = "<group>"; };
+		82E4AFD11CA2C90C00B9D608 /* LXNetworkKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXNetworkKit.m; sourceTree = "<group>"; };
+		82E4AFD31CA2CB8F00B9D608 /* LXNetworkKit+Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LXNetworkKit+Login.h"; sourceTree = "<group>"; };
+		82E4AFD41CA2CB8F00B9D608 /* LXNetworkKit+Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LXNetworkKit+Login.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +108,7 @@
 		8235E0601C9B9D9900DF8EA2 /* 出行 */ = {
 			isa = PBXGroup;
 			children = (
+				82E4AFCF1CA2C3FB00B9D608 /* Network */,
 				8235E0641C9B9D9900DF8EA2 /* AppDelegate.h */,
 				8235E0651C9B9D9900DF8EA2 /* AppDelegate.m */,
 				8235E0A81C9BA25C00DF8EA2 /* HomePageViewControllers */,
@@ -148,10 +163,34 @@
 		8235E0AA1C9BA28200DF8EA2 /* ContactsPageViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8235E0C81C9FE2EC00DF8EA2 /* ViewModel */,
 				8235E0B11C9BA30400DF8EA2 /* ContactsPageViewController.h */,
 				8235E0B21C9BA30400DF8EA2 /* ContactsPageViewController.m */,
+				82E4AFC41CA2796A00B9D608 /* RegisterViewController.h */,
+				82E4AFC51CA2796A00B9D608 /* RegisterViewController.m */,
+				82E4AFC61CA2796A00B9D608 /* RegisterViewController.xib */,
 			);
 			name = ContactsPageViewControllers;
+			sourceTree = "<group>";
+		};
+		8235E0C81C9FE2EC00DF8EA2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8235E0C91C9FE30F00DF8EA2 /* ContactsViewModel.h */,
+				8235E0CA1C9FE30F00DF8EA2 /* ContactsViewModel.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		82E4AFCF1CA2C3FB00B9D608 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				82E4AFD01CA2C90C00B9D608 /* LXNetworkKit.h */,
+				82E4AFD11CA2C90C00B9D608 /* LXNetworkKit.m */,
+				82E4AFD31CA2CB8F00B9D608 /* LXNetworkKit+Login.h */,
+				82E4AFD41CA2CB8F00B9D608 /* LXNetworkKit+Login.m */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +256,7 @@
 			files = (
 				8235E07A1C9B9FC400DF8EA2 /* HomePage.storyboard in Resources */,
 				8235E0711C9B9D9900DF8EA2 /* LaunchScreen.storyboard in Resources */,
+				82E4AFC81CA2796A00B9D608 /* RegisterViewController.xib in Resources */,
 				8235E0801C9BA00000DF8EA2 /* ContactsPage.storyboard in Resources */,
 				8235E07D1C9B9FDE00DF8EA2 /* FavouritePage.storyboard in Resources */,
 				8235E0B51C9BAEF700DF8EA2 /* Assets.xcassets in Resources */,
@@ -280,10 +320,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8235E0661C9B9D9900DF8EA2 /* AppDelegate.m in Sources */,
+				8235E0CB1C9FE30F00DF8EA2 /* ContactsViewModel.m in Sources */,
 				8235E0631C9B9D9900DF8EA2 /* main.m in Sources */,
 				8235E0AD1C9BA2CD00DF8EA2 /* HomePageViewController.m in Sources */,
+				82E4AFC71CA2796A00B9D608 /* RegisterViewController.m in Sources */,
+				82E4AFD51CA2CB8F00B9D608 /* LXNetworkKit+Login.m in Sources */,
 				8235E0B01C9BA2EF00DF8EA2 /* FavourotePageViewController.m in Sources */,
 				8235E0B31C9BA30400DF8EA2 /* ContactsPageViewController.m in Sources */,
+				82E4AFD21CA2C90C00B9D608 /* LXNetworkKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,10 +462,13 @@
 			baseConfigurationReference = 4D77B45FFC214F8D8318277A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "出行/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kee.--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -430,10 +477,13 @@
 			baseConfigurationReference = 06CD5CEABA542A6AEB29CA53 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "出行/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kee.--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

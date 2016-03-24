@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "LXNetworkKit.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface LXNetworkKit (Login)
+
+- (RACSignal *)registerWithUsername:(NSString *)username password:(NSString *)password;
 
 @end

@@ -10,4 +10,11 @@
 
 @implementation LXNetworkKit (Login)
 
+- (RACSignal *)registerWithUsername:(NSString *)username password:(NSString *)password {
+    
+    
+    return [RACSignal empty];
+    
+}
+
 @end

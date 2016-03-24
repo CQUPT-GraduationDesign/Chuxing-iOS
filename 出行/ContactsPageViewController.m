@@ -215,6 +215,7 @@ typedef NS_ENUM(NSInteger, LoginShowType) {
         [self.viewModel.loginCommand execute:nil];
     }];
     
+    
 }
 
 

@@ -18,12 +18,12 @@
 		8235E0AD1C9BA2CD00DF8EA2 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8235E0AC1C9BA2CD00DF8EA2 /* HomePageViewController.m */; };
 		8235E0B01C9BA2EF00DF8EA2 /* FavourotePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8235E0AF1C9BA2EF00DF8EA2 /* FavourotePageViewController.m */; };
 		8235E0B31C9BA30400DF8EA2 /* ContactsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8235E0B21C9BA30400DF8EA2 /* ContactsPageViewController.m */; };
-		8235E0B51C9BAEF700DF8EA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8235E0B41C9BAEF700DF8EA2 /* Assets.xcassets */; };
 		8235E0CB1C9FE30F00DF8EA2 /* ContactsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8235E0CA1C9FE30F00DF8EA2 /* ContactsViewModel.m */; };
 		82E4AFC71CA2796A00B9D608 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E4AFC51CA2796A00B9D608 /* RegisterViewController.m */; };
 		82E4AFC81CA2796A00B9D608 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82E4AFC61CA2796A00B9D608 /* RegisterViewController.xib */; };
 		82E4AFD21CA2C90C00B9D608 /* LXNetworkKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E4AFD11CA2C90C00B9D608 /* LXNetworkKit.m */; };
 		82E4AFD51CA2CB8F00B9D608 /* LXNetworkKit+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E4AFD41CA2CB8F00B9D608 /* LXNetworkKit+Login.m */; };
+		82E4AFD71CA2D74000B9D608 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82E4AFD61CA2D74000B9D608 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +46,6 @@
 		8235E0AF1C9BA2EF00DF8EA2 /* FavourotePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavourotePageViewController.m; sourceTree = "<group>"; };
 		8235E0B11C9BA30400DF8EA2 /* ContactsPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsPageViewController.h; sourceTree = "<group>"; };
 		8235E0B21C9BA30400DF8EA2 /* ContactsPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsPageViewController.m; sourceTree = "<group>"; };
-		8235E0B41C9BAEF700DF8EA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8235E0C91C9FE30F00DF8EA2 /* ContactsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsViewModel.h; sourceTree = "<group>"; };
 		8235E0CA1C9FE30F00DF8EA2 /* ContactsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsViewModel.m; sourceTree = "<group>"; };
 		82E4AFC41CA2796A00B9D608 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		82E4AFD11CA2C90C00B9D608 /* LXNetworkKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXNetworkKit.m; sourceTree = "<group>"; };
 		82E4AFD31CA2CB8F00B9D608 /* LXNetworkKit+Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LXNetworkKit+Login.h"; sourceTree = "<group>"; };
 		82E4AFD41CA2CB8F00B9D608 /* LXNetworkKit+Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LXNetworkKit+Login.m"; sourceTree = "<group>"; };
+		82E4AFD61CA2D74000B9D608 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +117,7 @@
 				8235E0A71C9BA23300DF8EA2 /* StoryBoards */,
 				8235E06F1C9B9D9900DF8EA2 /* LaunchScreen.storyboard */,
 				8235E0721C9B9D9900DF8EA2 /* Info.plist */,
-				8235E0B41C9BAEF700DF8EA2 /* Assets.xcassets */,
+				82E4AFD61CA2D74000B9D608 /* Assets.xcassets */,
 				8235E0611C9B9D9900DF8EA2 /* Supporting Files */,
 			);
 			path = "出行";
@@ -258,8 +258,8 @@
 				8235E0711C9B9D9900DF8EA2 /* LaunchScreen.storyboard in Resources */,
 				82E4AFC81CA2796A00B9D608 /* RegisterViewController.xib in Resources */,
 				8235E0801C9BA00000DF8EA2 /* ContactsPage.storyboard in Resources */,
+				82E4AFD71CA2D74000B9D608 /* Assets.xcassets in Resources */,
 				8235E07D1C9B9FDE00DF8EA2 /* FavouritePage.storyboard in Resources */,
-				8235E0B51C9BAEF700DF8EA2 /* Assets.xcassets in Resources */,
 				8235E06C1C9B9D9900DF8EA2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

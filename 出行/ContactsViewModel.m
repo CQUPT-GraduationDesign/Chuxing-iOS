@@ -7,6 +7,8 @@
 //
 
 #import "ContactsViewModel.h"
+#import "LXNetworkKit.h"
+#import "LXNetworkKit+Login.h"
 
 @interface ContactsViewModel()
 
@@ -39,10 +41,9 @@
     
     self.loginCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(NSString *password) {
         
-        return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-            [subscriber sendCompleted];
-            return nil;
-        }];
+        return [RACSignal empty];
+        
+//        return [[LXNetworkKit sharedInstance] registerWithUsername:_username password:_password];
     }];
 }
 

@@ -8,13 +8,97 @@
 
 #import "LXNetworkKit+Login.h"
 
+
 @implementation LXNetworkKit (Login)
 
 - (RACSignal *)registerWithUsername:(NSString *)username password:(NSString *)password {
     
     
+    NSDictionary *dic = @{@"username": username, @"password": password};
+    
+
+//    [HYBNetworking postWithUrl:@"/api/index.php/user/register" refreshCache:YES params:dic success:^(id response) {
+//        NSLog(@"%@", response);
+//    } fail:^(NSError *error) {
+//        NSLog(@"%@", error);
+//    }];
+    
+    [SVProgressHUD show];
+    [[AFHTTPSessionManager manager] POST:@"http://go.king-liu.net/api/index.php/user/register" parameters:dic progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [SVProgressHUD dismiss];
+        
+        NSDictionary *dic = [[NSDictionary alloc] initWithDictionary:responseObject];
+        
+        NSString *str = [dic objectForKey:@"message"];
+        NSNumber *code = [dic objectForKey:@"code"];
+        
+        if ([code isEqual:@(200)]) {
+            [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"成功" description:str type:TWMessageBarMessageTypeSuccess];
+            
+        } else {
+            [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"失败" description:str type:TWMessageBarMessageTypeError];
+        }
+        
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [SVProgressHUD dismiss];
+        
+        [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"失败" description:[error localizedDescription] type:TWMessageBarMessageTypeError];
+    }];
+    
+    
+    
+    
     return [RACSignal empty];
+
     
 }
+
+
+- (RACSignal *)loginWithUsername:(NSString *)username password:(NSString *)password {
+    
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        
+        
+        NSDictionary *dic = @{@"username": username, @"password": password};
+        
+        [SVProgressHUD show];
+        [[AFHTTPSessionManager manager] POST:@"http://go.king-liu.net/api/index.php/user/login" parameters:dic progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            [SVProgressHUD dismiss];
+            
+            NSDictionary *dic = [[NSDictionary alloc] initWithDictionary:responseObject];
+            
+            NSString *str = [dic objectForKey:@"message"];
+            NSNumber *code = [dic objectForKey:@"code"];
+            NSString *token = [dic objectForKey:@"access_token"];
+            
+            if ([code isEqual:@(200)]) {
+                [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"成功" description:str type:TWMessageBarMessageTypeSuccess];
+                
+                [subscriber sendNext:token];
+                
+            } else {
+                [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"失败" description:str type:TWMessageBarMessageTypeError];
+                
+                [subscriber sendNext:@("")];
+            }
+            
+            [subscriber sendCompleted];
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            [SVProgressHUD dismiss];
+            
+            [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"失败" description:[error localizedDescription] type:TWMessageBarMessageTypeError];
+        }];
+
+        
+        
+        return nil;
+        
+    }];
+    
+}
+
+
 
 @end

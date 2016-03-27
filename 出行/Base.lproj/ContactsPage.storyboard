@@ -19,22 +19,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="owl-login" translatesAutoresizingMaskIntoConstraints="NO" id="0Uc-CQ-e4g">
-                                <rect key="frame" x="177" y="40" width="246" height="127"/>
+                                <rect key="frame" x="177" y="84" width="246" height="127"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="246" id="pjS-UF-5No"/>
                                     <constraint firstAttribute="height" constant="127" id="wpl-6o-vvL"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="owl-login-arm-right" translatesAutoresizingMaskIntoConstraints="NO" id="vZx-hM-r15">
-                                <rect key="frame" x="363" y="167" width="40" height="65"/>
+                                <rect key="frame" x="363" y="211" width="40" height="65"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="owl-login-arm-left" translatesAutoresizingMaskIntoConstraints="NO" id="P7O-lX-fPL">
-                                <rect key="frame" x="197" y="167" width="40" height="65"/>
+                                <rect key="frame" x="197" y="211" width="40" height="65"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zvf-wf-VFJ">
-                                <rect key="frame" x="30" y="156" width="540" height="260"/>
+                                <rect key="frame" x="30" y="200" width="540" height="260"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zrz-ha-7PD">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入用户名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zrz-ha-7PD">
                                         <rect key="frame" x="8" y="34" width="524" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="3wP-8O-Rw7"/>
@@ -43,7 +43,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rfl-kp-r1W">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rfl-kp-r1W">
                                         <rect key="frame" x="8" y="97" width="524" height="44"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -95,14 +95,14 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_hand" translatesAutoresizingMaskIntoConstraints="NO" id="a1j-OL-B8P">
-                                <rect key="frame" x="187" y="137" width="40" height="40"/>
+                                <rect key="frame" x="187" y="181" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="7df-VA-tAJ"/>
                                     <constraint firstAttribute="height" constant="40" id="ffL-04-4bw"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_hand" translatesAutoresizingMaskIntoConstraints="NO" id="g8L-5J-isV">
-                                <rect key="frame" x="373" y="137" width="40" height="40"/>
+                                <rect key="frame" x="373" y="181" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="Cfr-Ag-GGx"/>
                                     <constraint firstAttribute="height" constant="40" id="cuZ-xM-QkV"/>
@@ -115,6 +115,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="没有账号,立即注册"/>
+                                <connections>
+                                    <action selector="registerBtnClicked:" destination="1f8-jm-qhP" eventType="touchUpInside" id="980-gq-hud"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -244,6 +247,27 @@
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="关于我们" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pTx-b4-Cww">
                                                     <rect key="frame" x="15" y="0.0" width="550" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="0dM-g9-Lxv">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="KZh-sV-nLc" style="IBUITableViewCellStyleDefault" id="FtI-Ul-uT0">
+                                        <rect key="frame" x="0.0" y="379" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FtI-Ul-uT0" id="nmg-Pc-MYh">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="退出登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KZh-sV-nLc">
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>

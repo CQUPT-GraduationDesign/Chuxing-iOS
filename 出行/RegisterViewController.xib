@@ -7,6 +7,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController">
             <connections>
+                <outlet property="passwordTextField" destination="Pto-kZ-j5B" id="N4I-2g-VMe"/>
+                <outlet property="registerBtn" destination="Dji-2f-M4e" id="VOC-oA-JMA"/>
+                <outlet property="usernameTextField" destination="55r-VD-lkx" id="r60-D0-C6h"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +17,54 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dji-2f-M4e">
+                    <rect key="frame" x="8" y="424" width="584" height="44"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <state key="normal" title="注册" backgroundImage="Login_btn">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="55r-VD-lkx">
+                    <rect key="frame" x="8" y="193" width="584" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="1a8-Pq-V0o"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pto-kZ-j5B">
+                    <rect key="frame" x="8" y="260" width="584" height="44"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欢迎来到出行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="web-Ft-l1T">
+                    <rect key="frame" x="222" y="120" width="156" height="32"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="55r-VD-lkx" firstAttribute="top" secondItem="web-Ft-l1T" secondAttribute="bottom" constant="41" id="6wu-GO-lrT"/>
+                <constraint firstAttribute="trailing" secondItem="55r-VD-lkx" secondAttribute="trailing" constant="8" id="HJy-Qf-IXZ"/>
+                <constraint firstItem="Pto-kZ-j5B" firstAttribute="width" secondItem="55r-VD-lkx" secondAttribute="width" id="HXO-gf-yMM"/>
+                <constraint firstItem="web-Ft-l1T" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="120" id="IVs-Cy-5go"/>
+                <constraint firstItem="Dji-2f-M4e" firstAttribute="width" secondItem="Pto-kZ-j5B" secondAttribute="width" id="U4C-wq-Txm"/>
+                <constraint firstItem="Pto-kZ-j5B" firstAttribute="height" secondItem="55r-VD-lkx" secondAttribute="height" id="Uq8-9q-rpj"/>
+                <constraint firstItem="Dji-2f-M4e" firstAttribute="height" secondItem="Pto-kZ-j5B" secondAttribute="height" id="Yv1-QM-Goy"/>
+                <constraint firstItem="55r-VD-lkx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="bgM-Ge-Wa1"/>
+                <constraint firstItem="Dji-2f-M4e" firstAttribute="top" secondItem="Pto-kZ-j5B" secondAttribute="bottom" constant="120" id="bmo-j1-zZM"/>
+                <constraint firstItem="55r-VD-lkx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fSK-R5-WxW"/>
+                <constraint firstItem="web-Ft-l1T" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="oWa-gS-5sn"/>
+                <constraint firstItem="Dji-2f-M4e" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ooH-vi-l7v"/>
+                <constraint firstItem="Pto-kZ-j5B" firstAttribute="top" secondItem="55r-VD-lkx" secondAttribute="bottom" constant="23" id="u02-sm-BVe"/>
+                <constraint firstItem="Pto-kZ-j5B" firstAttribute="centerX" secondItem="55r-VD-lkx" secondAttribute="centerX" id="zI8-vk-dYY"/>
+            </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="Login_btn" width="10" height="10"/>
+    </resources>
 </document>

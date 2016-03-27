@@ -10,6 +10,7 @@
 #import "ContactsViewModel.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <ReactiveCocoa/RACEXTScope.h>
+#import "RegisterViewController.h"
 
 typedef NS_ENUM(NSInteger, LoginShowType) {
     LoginShowTypeNone,
@@ -100,6 +101,12 @@ typedef NS_ENUM(NSInteger, LoginShowType) {
 }
 */
 
+- (IBAction)registerBtnClicked:(UIButton *)sender {
+    
+    RegisterViewController *registerVC = [[RegisterViewController alloc] init];
+    [self.navigationController pushViewController:registerVC animated:YES];
+    
+}
 
 
 #pragma mark - UITextFieldDelegate

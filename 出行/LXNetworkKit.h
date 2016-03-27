@@ -7,6 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <HYBNetworking/HYBNetworking.h>
+#import <AFNetworking/AFNetworking.h>
+#import <TWMessageBarManager/TWMessageBarManager.h>
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface LXNetworkKit : NSObject
 

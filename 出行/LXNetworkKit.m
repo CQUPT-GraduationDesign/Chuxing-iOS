@@ -8,6 +8,8 @@
 
 #import "LXNetworkKit.h"
 
+static const NSString *baseURL = @"http://go.king-liu.net";
+
 @implementation LXNetworkKit
 
 
@@ -17,10 +19,12 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[self alloc] init];
+        [HYBNetworking updateBaseUrl: @"http://go.king-liu.net"];
     });
     
     return sharedInstance;
 }
+
 
 
 @end

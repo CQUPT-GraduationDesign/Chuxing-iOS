@@ -41,10 +41,17 @@
     
     self.loginCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(NSString *password) {
         
-        return [RACSignal empty];
-        
-//        return [[LXNetworkKit sharedInstance] registerWithUsername:_username password:_password];
+        return [[[[LXNetworkKit sharedInstance] loginWithUsername:_username password:_password]
+        filter:^BOOL(NSString *token) { // 判断是否有token，如果没有就是登录失败
+            return token.length > 0;
+        }]
+        doNext:^(id x) {
+            // 跳转页面，存储用户信息
+        }];
     }];
+    
+    
+    
 }
 
 @end

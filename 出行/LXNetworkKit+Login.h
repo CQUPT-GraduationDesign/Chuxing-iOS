@@ -13,5 +13,6 @@
 @interface LXNetworkKit (Login)
 
 - (RACSignal *)registerWithUsername:(NSString *)username password:(NSString *)password;
+- (RACSignal *)loginWithUsername:(NSString *)username password:(NSString *)password;
 
 @end

@@ -9,6 +9,8 @@
 #import "ContactsViewModel.h"
 #import "LXNetworkKit.h"
 #import "LXNetworkKit+Login.h"
+#import <Security/Security.h>
+#import "User.h"
 
 @interface ContactsViewModel()
 
@@ -32,6 +34,23 @@
 
 - (void)initialize {
 
+    void(^doNext)(User *user) = ^(User *user) {
+        
+        // 存储用户信息，并且跳转页面
+        
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        [userDefaults setBool:YES forKey:@"isLogin"];
+        [userDefaults setObject:user.name forKey:@"userName"];
+        [userDefaults setObject:user.email forKey:@"userEmail"];
+        [userDefaults setObject:user.token forKey:@"userToken"];
+        
+        [userDefaults synchronize];
+        
+        
+        // TODO: - 跳转
+        
+    };
+    
     
     self.validLoginSignal = [[RACSignal
                              combineLatest:@[RACObserve(self, username), RACObserve(self, password)]
@@ -42,16 +61,16 @@
     self.loginCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(NSString *password) {
         
         return [[[[LXNetworkKit sharedInstance] loginWithUsername:_username password:_password]
-        filter:^BOOL(NSString *token) { // 判断是否有token，如果没有就是登录失败
-            return token.length > 0;
+        filter:^BOOL(User *user) { // 判断是否有user
+            return user != nil;
         }]
-        doNext:^(id x) {
-            // 跳转页面，存储用户信息
-        }];
+        doNext:doNext];
     }];
     
     
     
 }
+
+
 
 @end

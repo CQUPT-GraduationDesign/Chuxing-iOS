@@ -7,6 +7,7 @@
 //
 
 #import "LXNetworkKit+Login.h"
+#import "User.h"
 
 
 @implementation LXNetworkKit (Login)
@@ -66,21 +67,40 @@
         [[AFHTTPSessionManager manager] POST:@"http://go.king-liu.net/api/index.php/user/login" parameters:dic progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             [SVProgressHUD dismiss];
             
+            User *currentUser = [[User alloc] init];
+            
+            
             NSDictionary *dic = [[NSDictionary alloc] initWithDictionary:responseObject];
             
             NSString *str = [dic objectForKey:@"message"];
             NSNumber *code = [dic objectForKey:@"code"];
             NSString *token = [dic objectForKey:@"access_token"];
             
+            [currentUser setToken:token];
+            
+            NSString *data = [dic objectForKey:@"data"];
+            if (data) {
+                NSDictionary *dataDic = [[NSDictionary alloc] initWithDictionary:responseObject];
+                
+                NSString *name = [dataDic objectForKey:@"name"];
+                NSString *email = [dataDic objectForKey:@"email"];
+                
+                [currentUser setName:name];
+                [currentUser setEmail:email];
+                
+            }
+            
+            
+            
             if ([code isEqual:@(200)]) {
                 [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"成功" description:str type:TWMessageBarMessageTypeSuccess];
                 
-                [subscriber sendNext:token];
+                [subscriber sendNext:currentUser];
                 
             } else {
                 [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"失败" description:str type:TWMessageBarMessageTypeError];
                 
-                [subscriber sendNext:@("")];
+                [subscriber sendCompleted];
             }
             
             [subscriber sendCompleted];

@@ -25,6 +25,7 @@
 		82E4AFD51CA2CB8F00B9D608 /* LXNetworkKit+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E4AFD41CA2CB8F00B9D608 /* LXNetworkKit+Login.m */; };
 		82E4AFD71CA2D74000B9D608 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82E4AFD61CA2D74000B9D608 /* Assets.xcassets */; };
 		82E4AFEC1CA7AB4000B9D608 /* RegisterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E4AFEB1CA7AB4000B9D608 /* RegisterViewModel.m */; };
+		82E4AFF21CA95DCC00B9D608 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E4AFF11CA95DCC00B9D608 /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,8 @@
 		82E4AFD61CA2D74000B9D608 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82E4AFEA1CA7AB4000B9D608 /* RegisterViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewModel.h; sourceTree = "<group>"; };
 		82E4AFEB1CA7AB4000B9D608 /* RegisterViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewModel.m; sourceTree = "<group>"; };
+		82E4AFF01CA95DCC00B9D608 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		82E4AFF11CA95DCC00B9D608 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,7 @@
 			children = (
 				8235E0641C9B9D9900DF8EA2 /* AppDelegate.h */,
 				8235E0651C9B9D9900DF8EA2 /* AppDelegate.m */,
+				82E4AFEF1CA95DBA00B9D608 /* Model */,
 				82E4AFEE1CA7CF0400B9D608 /* View */,
 				82E4AFED1CA7C23600B9D608 /* Account */,
 				82E4AFCF1CA2C3FB00B9D608 /* Network */,
@@ -212,6 +216,15 @@
 				8235E0A81C9BA25C00DF8EA2 /* HomePageViewControllers */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		82E4AFEF1CA95DBA00B9D608 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				82E4AFF01CA95DCC00B9D608 /* User.h */,
+				82E4AFF11CA95DCC00B9D608 /* User.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,6 +359,7 @@
 				8235E0AD1C9BA2CD00DF8EA2 /* HomePageViewController.m in Sources */,
 				82E4AFC71CA2796A00B9D608 /* RegisterViewController.m in Sources */,
 				82E4AFEC1CA7AB4000B9D608 /* RegisterViewModel.m in Sources */,
+				82E4AFF21CA95DCC00B9D608 /* User.m in Sources */,
 				82E4AFD51CA2CB8F00B9D608 /* LXNetworkKit+Login.m in Sources */,
 				8235E0B01C9BA2EF00DF8EA2 /* FavourotePageViewController.m in Sources */,
 				8235E0B31C9BA30400DF8EA2 /* ContactsPageViewController.m in Sources */,

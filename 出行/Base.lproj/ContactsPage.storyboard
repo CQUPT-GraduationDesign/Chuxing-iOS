@@ -174,10 +174,10 @@
             </objects>
             <point key="canvasLocation" x="1267" y="2080"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Contacts Table View Controller-->
         <scene sceneID="pPm-Tg-O3j">
             <objects>
-                <tableViewController storyboardIdentifier="ContactsTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mcS-F4-i7k" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ContactsTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mcS-F4-i7k" customClass="ContactsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="s3F-lW-2L5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -213,9 +213,6 @@
                                                 <constraint firstItem="Uvx-9L-Upa" firstAttribute="top" secondItem="opv-w0-7Ei" secondAttribute="bottom" constant="8" id="rSC-W2-BLL"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="1f8-jm-qhP" kind="show" id="Fdq-L6-aEF"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -286,6 +283,10 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="n0Y-Rc-r6a"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="userImage" destination="opv-w0-7Ei" id="Piu-WI-cWy"/>
+                        <outlet property="userName" destination="Uvx-9L-Upa" id="PWt-7o-vSX"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k1r-Rq-6LZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

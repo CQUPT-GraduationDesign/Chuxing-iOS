@@ -26,6 +26,8 @@
 		82E4AFD71CA2D74000B9D608 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82E4AFD61CA2D74000B9D608 /* Assets.xcassets */; };
 		82E4AFEC1CA7AB4000B9D608 /* RegisterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E4AFEB1CA7AB4000B9D608 /* RegisterViewModel.m */; };
 		82E4AFF21CA95DCC00B9D608 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E4AFF11CA95DCC00B9D608 /* User.m */; };
+		82E4AFF51CA9625400B9D608 /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E4AFF41CA9625400B9D608 /* ContactsTableViewController.m */; };
+		82E4AFF91CA9686400B9D608 /* LXUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E4AFF81CA9686400B9D608 /* LXUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,10 @@
 		82E4AFEB1CA7AB4000B9D608 /* RegisterViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewModel.m; sourceTree = "<group>"; };
 		82E4AFF01CA95DCC00B9D608 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		82E4AFF11CA95DCC00B9D608 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		82E4AFF31CA9625400B9D608 /* ContactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewController.h; sourceTree = "<group>"; };
+		82E4AFF41CA9625400B9D608 /* ContactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
+		82E4AFF71CA9686400B9D608 /* LXUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXUtil.h; sourceTree = "<group>"; };
+		82E4AFF81CA9686400B9D608 /* LXUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,7 @@
 			children = (
 				8235E0641C9B9D9900DF8EA2 /* AppDelegate.h */,
 				8235E0651C9B9D9900DF8EA2 /* AppDelegate.m */,
+				82E4AFF61CA9684F00B9D608 /* Util */,
 				82E4AFEF1CA95DBA00B9D608 /* Model */,
 				82E4AFEE1CA7CF0400B9D608 /* View */,
 				82E4AFED1CA7C23600B9D608 /* Account */,
@@ -170,6 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				8235E0C81C9FE2EC00DF8EA2 /* ViewModel */,
+				82E4AFF31CA9625400B9D608 /* ContactsTableViewController.h */,
+				82E4AFF41CA9625400B9D608 /* ContactsTableViewController.m */,
 				8235E0B11C9BA30400DF8EA2 /* ContactsPageViewController.h */,
 				8235E0B21C9BA30400DF8EA2 /* ContactsPageViewController.m */,
 				82E4AFC41CA2796A00B9D608 /* RegisterViewController.h */,
@@ -225,6 +234,15 @@
 				82E4AFF11CA95DCC00B9D608 /* User.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		82E4AFF61CA9684F00B9D608 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				82E4AFF71CA9686400B9D608 /* LXUtil.h */,
+				82E4AFF81CA9686400B9D608 /* LXUtil.m */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,6 +373,7 @@
 			files = (
 				8235E0661C9B9D9900DF8EA2 /* AppDelegate.m in Sources */,
 				8235E0CB1C9FE30F00DF8EA2 /* ContactsViewModel.m in Sources */,
+				82E4AFF51CA9625400B9D608 /* ContactsTableViewController.m in Sources */,
 				8235E0631C9B9D9900DF8EA2 /* main.m in Sources */,
 				8235E0AD1C9BA2CD00DF8EA2 /* HomePageViewController.m in Sources */,
 				82E4AFC71CA2796A00B9D608 /* RegisterViewController.m in Sources */,
@@ -363,6 +382,7 @@
 				82E4AFD51CA2CB8F00B9D608 /* LXNetworkKit+Login.m in Sources */,
 				8235E0B01C9BA2EF00DF8EA2 /* FavourotePageViewController.m in Sources */,
 				8235E0B31C9BA30400DF8EA2 /* ContactsPageViewController.m in Sources */,
+				82E4AFF91CA9686400B9D608 /* LXUtil.m in Sources */,
 				82E4AFD21CA2C90C00B9D608 /* LXNetworkKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

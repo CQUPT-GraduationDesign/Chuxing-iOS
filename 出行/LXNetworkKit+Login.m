@@ -14,44 +14,51 @@
 
 - (RACSignal *)registerWithUsername:(NSString *)username password:(NSString *)password {
     
-    
-    NSDictionary *dic = @{@"username": username, @"password": password};
-    
-
-//    [HYBNetworking postWithUrl:@"/api/index.php/user/register" refreshCache:YES params:dic success:^(id response) {
-//        NSLog(@"%@", response);
-//    } fail:^(NSError *error) {
-//        NSLog(@"%@", error);
-//    }];
-    
-    [SVProgressHUD show];
-    [[AFHTTPSessionManager manager] POST:@"http://go.king-liu.net/api/index.php/user/register" parameters:dic progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        [SVProgressHUD dismiss];
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         
-        NSDictionary *dic = [[NSDictionary alloc] initWithDictionary:responseObject];
         
-        NSString *str = [dic objectForKey:@"message"];
-        NSNumber *code = [dic objectForKey:@"code"];
+        NSDictionary *dic = @{@"username": username, @"password": password};
         
-        if ([code isEqual:@(200)]) {
-            [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"成功" description:str type:TWMessageBarMessageTypeSuccess];
+        
+        [SVProgressHUD show];
+        [[AFHTTPSessionManager manager] POST:@"http://go.king-liu.net/api/index.php/user/register" parameters:dic progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            [SVProgressHUD dismiss];
             
-        } else {
-            [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"失败" description:str type:TWMessageBarMessageTypeError];
-        }
+            NSDictionary *dic = [[NSDictionary alloc] initWithDictionary:responseObject];
+            
+            NSString *str = [dic objectForKey:@"message"];
+            NSNumber *code = [dic objectForKey:@"code"];
+            
+            if ([code isEqual:@(200)]) {
+                [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"成功" description:str type:TWMessageBarMessageTypeSuccess];
+                
+                [subscriber sendNext:@(YES)];
+                [subscriber sendCompleted];
+                
+            } else {
+                [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"失败" description:str type:TWMessageBarMessageTypeError];
+                
+                [subscriber sendNext:@(NO)];
+                [subscriber sendCompleted];
+            }
+            
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            [SVProgressHUD dismiss];
+            
+            [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"失败" description:[error localizedDescription] type:TWMessageBarMessageTypeError];
+            
+            [subscriber sendNext:@(NO)];
+            [subscriber sendError:nil];
+            
+        }];
+
+        return [RACDisposable disposableWithBlock:^{
+            NSLog(@"dispos");
+        }];
         
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [SVProgressHUD dismiss];
-        
-        [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"失败" description:[error localizedDescription] type:TWMessageBarMessageTypeError];
     }];
     
-    
-    
-    
-    return [RACSignal empty];
-
     
 }
 

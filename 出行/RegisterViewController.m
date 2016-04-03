@@ -66,11 +66,20 @@
     RAC(self.viewModel, username) = [self.usernameTextField rac_textSignal];
     RAC(self.viewModel, password) = [self.passwordTextField rac_textSignal];
     RAC(self.registerBtn, enabled) = self.viewModel.validRegisterSignal;
+    [self.viewModel.registerCommand.executing subscribeNext:^(NSNumber *x) {
+        self.registerBtn.enabled = !x.boolValue;
+    }];
     
     
     [[self.registerBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         @strongify(self)
-        [self.viewModel.registerCommand  execute:nil];
+
+        [[self.viewModel.registerCommand  execute:nil] subscribeNext:^(id x) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
+//         subscribeCompleted:^{
+//            [self.navigationController popViewControllerAnimated:YES];
+//        }];
     }];
     
 }

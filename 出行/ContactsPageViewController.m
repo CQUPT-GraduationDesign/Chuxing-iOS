@@ -219,8 +219,12 @@ typedef NS_ENUM(NSInteger, LoginShowType) {
     
     [[self.logintn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         @strongify(self)
-        [self.viewModel.loginCommand execute:nil];
+        [[self.viewModel.loginCommand execute:nil] subscribeCompleted:^{
+            // 执行完成   跳转
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
     }];
+    
     
     
 }

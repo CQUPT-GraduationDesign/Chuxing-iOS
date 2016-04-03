@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import "LXViewModel.h"
 
-@interface ContactsViewModel : NSObject
+@interface ContactsViewModel : LXViewModel
 
 @property(nonatomic, copy) NSString *username;
 @property(nonatomic, copy) NSString *password;

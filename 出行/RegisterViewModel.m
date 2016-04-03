@@ -43,7 +43,10 @@
     self.registerCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(NSString *password) {
         
         
-        return [[LXNetworkKit sharedInstance] registerWithUsername:_username password:_password];
+        return [[[LXNetworkKit sharedInstance] registerWithUsername:_username password:_password] filter:^BOOL(NSNumber *value) {
+            //筛选注册成功的
+            return [value boolValue];
+        }];
     }];
 }
 

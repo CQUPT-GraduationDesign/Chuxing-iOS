@@ -124,8 +124,8 @@
 				8235E0651C9B9D9900DF8EA2 /* AppDelegate.m */,
 				82E4AFF61CA9684F00B9D608 /* Util */,
 				82E4AFEF1CA95DBA00B9D608 /* Model */,
+				8235E0C81C9FE2EC00DF8EA2 /* ViewModel */,
 				82E4AFEE1CA7CF0400B9D608 /* View */,
-				82E4AFED1CA7C23600B9D608 /* Account */,
 				82E4AFCF1CA2C3FB00B9D608 /* Network */,
 				8235E0A71C9BA23300DF8EA2 /* StoryBoards */,
 				8235E06F1C9B9D9900DF8EA2 /* LaunchScreen.storyboard */,
@@ -176,7 +176,6 @@
 		8235E0AA1C9BA28200DF8EA2 /* ContactsPageViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8235E0C81C9FE2EC00DF8EA2 /* ViewModel */,
 				82E4AFF31CA9625400B9D608 /* ContactsTableViewController.h */,
 				82E4AFF41CA9625400B9D608 /* ContactsTableViewController.m */,
 				8235E0B11C9BA30400DF8EA2 /* ContactsPageViewController.h */,
@@ -208,13 +207,6 @@
 				82E4AFD41CA2CB8F00B9D608 /* LXNetworkKit+Login.m */,
 			);
 			name = Network;
-			sourceTree = "<group>";
-		};
-		82E4AFED1CA7C23600B9D608 /* Account */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Account;
 			sourceTree = "<group>";
 		};
 		82E4AFEE1CA7CF0400B9D608 /* View */ = {

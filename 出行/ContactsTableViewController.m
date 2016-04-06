@@ -63,6 +63,7 @@
             UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"ContactsPage" bundle:[NSBundle mainBundle]];
             UIViewController *view = [storyBoard instantiateViewControllerWithIdentifier:@"ContactsPageViewController"];
             
+            //[self presentViewController:view animated:YES completion:nil];
             [self.navigationController pushViewController:view animated:YES];
         }
     }

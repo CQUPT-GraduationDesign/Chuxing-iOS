@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@protocol LXViewModelService;
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface LXViewModel : NSObject
 

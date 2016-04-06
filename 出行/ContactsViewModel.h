@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <ReactiveCocoa/ReactiveCocoa.h>
 #import "LXViewModel.h"
 
 @interface ContactsViewModel : LXViewModel

@@ -21,11 +21,12 @@
 		8235E0CB1C9FE30F00DF8EA2 /* ContactsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8235E0CA1C9FE30F00DF8EA2 /* ContactsViewModel.m */; };
 		82A43AF11CB0F65E0004B5EB /* LXViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A43AF01CB0F65E0004B5EB /* LXViewModel.m */; };
 		82A43AF51CB0F8F20004B5EB /* LXViewModelService.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A43AF41CB0F8F20004B5EB /* LXViewModelService.m */; };
+		82A43AF71CB530ED0004B5EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82A43AF61CB530ED0004B5EB /* Assets.xcassets */; };
+		82A43AFB1CB546EB0004B5EB /* HomePageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A43AFA1CB546EB0004B5EB /* HomePageViewModel.m */; };
 		82E4AFC71CA2796A00B9D608 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E4AFC51CA2796A00B9D608 /* RegisterViewController.m */; };
 		82E4AFC81CA2796A00B9D608 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82E4AFC61CA2796A00B9D608 /* RegisterViewController.xib */; };
 		82E4AFD21CA2C90C00B9D608 /* LXNetworkKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E4AFD11CA2C90C00B9D608 /* LXNetworkKit.m */; };
 		82E4AFD51CA2CB8F00B9D608 /* LXNetworkKit+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E4AFD41CA2CB8F00B9D608 /* LXNetworkKit+Login.m */; };
-		82E4AFD71CA2D74000B9D608 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82E4AFD61CA2D74000B9D608 /* Assets.xcassets */; };
 		82E4AFEC1CA7AB4000B9D608 /* RegisterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E4AFEB1CA7AB4000B9D608 /* RegisterViewModel.m */; };
 		82E4AFF21CA95DCC00B9D608 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E4AFF11CA95DCC00B9D608 /* User.m */; };
 		82E4AFF51CA9625400B9D608 /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E4AFF41CA9625400B9D608 /* ContactsTableViewController.m */; };
@@ -59,6 +60,9 @@
 		82A43AF21CB0F6EF0004B5EB /* LXNavigationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXNavigationProtocol.h; sourceTree = "<group>"; };
 		82A43AF31CB0F8F20004B5EB /* LXViewModelService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXViewModelService.h; sourceTree = "<group>"; };
 		82A43AF41CB0F8F20004B5EB /* LXViewModelService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXViewModelService.m; sourceTree = "<group>"; };
+		82A43AF61CB530ED0004B5EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		82A43AF91CB546EB0004B5EB /* HomePageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewModel.h; sourceTree = "<group>"; };
+		82A43AFA1CB546EB0004B5EB /* HomePageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageViewModel.m; sourceTree = "<group>"; };
 		82E4AFC41CA2796A00B9D608 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		82E4AFC51CA2796A00B9D608 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		82E4AFC61CA2796A00B9D608 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
@@ -66,7 +70,6 @@
 		82E4AFD11CA2C90C00B9D608 /* LXNetworkKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXNetworkKit.m; sourceTree = "<group>"; };
 		82E4AFD31CA2CB8F00B9D608 /* LXNetworkKit+Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LXNetworkKit+Login.h"; sourceTree = "<group>"; };
 		82E4AFD41CA2CB8F00B9D608 /* LXNetworkKit+Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LXNetworkKit+Login.m"; sourceTree = "<group>"; };
-		82E4AFD61CA2D74000B9D608 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82E4AFEA1CA7AB4000B9D608 /* RegisterViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewModel.h; sourceTree = "<group>"; };
 		82E4AFEB1CA7AB4000B9D608 /* RegisterViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewModel.m; sourceTree = "<group>"; };
 		82E4AFF01CA95DCC00B9D608 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -137,7 +140,7 @@
 				8235E0A71C9BA23300DF8EA2 /* StoryBoards */,
 				8235E06F1C9B9D9900DF8EA2 /* LaunchScreen.storyboard */,
 				8235E0721C9B9D9900DF8EA2 /* Info.plist */,
-				82E4AFD61CA2D74000B9D608 /* Assets.xcassets */,
+				82A43AF61CB530ED0004B5EB /* Assets.xcassets */,
 				8235E0611C9B9D9900DF8EA2 /* Supporting Files */,
 			);
 			path = "出行";
@@ -165,6 +168,7 @@
 		8235E0A81C9BA25C00DF8EA2 /* HomePageViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				82A43AF81CB546D70004B5EB /* ViewModel */,
 				8235E0AB1C9BA2CD00DF8EA2 /* HomePageViewController.h */,
 				8235E0AC1C9BA2CD00DF8EA2 /* HomePageViewController.m */,
 			);
@@ -183,6 +187,7 @@
 		8235E0AA1C9BA28200DF8EA2 /* ContactsPageViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				82A43AFC1CB5496C0004B5EB /* ViewModel */,
 				82E4AFF31CA9625400B9D608 /* ContactsTableViewController.h */,
 				82E4AFF41CA9625400B9D608 /* ContactsTableViewController.m */,
 				8235E0B11C9BA30400DF8EA2 /* ContactsPageViewController.h */,
@@ -199,6 +204,22 @@
 			children = (
 				82A43AEF1CB0F65E0004B5EB /* LXViewModel.h */,
 				82A43AF01CB0F65E0004B5EB /* LXViewModel.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		82A43AF81CB546D70004B5EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				82A43AF91CB546EB0004B5EB /* HomePageViewModel.h */,
+				82A43AFA1CB546EB0004B5EB /* HomePageViewModel.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		82A43AFC1CB5496C0004B5EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
 				8235E0C91C9FE30F00DF8EA2 /* ContactsViewModel.h */,
 				8235E0CA1C9FE30F00DF8EA2 /* ContactsViewModel.m */,
 				82E4AFEA1CA7AB4000B9D608 /* RegisterViewModel.h */,
@@ -314,7 +335,7 @@
 				8235E0711C9B9D9900DF8EA2 /* LaunchScreen.storyboard in Resources */,
 				82E4AFC81CA2796A00B9D608 /* RegisterViewController.xib in Resources */,
 				8235E0801C9BA00000DF8EA2 /* ContactsPage.storyboard in Resources */,
-				82E4AFD71CA2D74000B9D608 /* Assets.xcassets in Resources */,
+				82A43AF71CB530ED0004B5EB /* Assets.xcassets in Resources */,
 				8235E07D1C9B9FDE00DF8EA2 /* FavouritePage.storyboard in Resources */,
 				8235E06C1C9B9D9900DF8EA2 /* Main.storyboard in Resources */,
 			);
@@ -375,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82A43AFB1CB546EB0004B5EB /* HomePageViewModel.m in Sources */,
 				82A43AF11CB0F65E0004B5EB /* LXViewModel.m in Sources */,
 				8235E0661C9B9D9900DF8EA2 /* AppDelegate.m in Sources */,
 				8235E0CB1C9FE30F00DF8EA2 /* ContactsViewModel.m in Sources */,

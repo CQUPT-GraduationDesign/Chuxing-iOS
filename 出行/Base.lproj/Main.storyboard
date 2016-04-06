@@ -9,6 +9,7 @@
         <scene sceneID="NMb-Cr-vSA">
             <objects>
                 <tabBarController id="mcX-Cm-6NZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="iQ9-YR-P4A"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="CHx-l1-uHL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

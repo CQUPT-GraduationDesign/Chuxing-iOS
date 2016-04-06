@@ -19,20 +19,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="owl-login" translatesAutoresizingMaskIntoConstraints="NO" id="0Uc-CQ-e4g">
-                                <rect key="frame" x="177" y="84" width="246" height="127"/>
+                                <rect key="frame" x="177" y="40" width="246" height="127"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="246" id="pjS-UF-5No"/>
                                     <constraint firstAttribute="height" constant="127" id="wpl-6o-vvL"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="owl-login-arm-right" translatesAutoresizingMaskIntoConstraints="NO" id="vZx-hM-r15">
-                                <rect key="frame" x="363" y="211" width="40" height="65"/>
+                                <rect key="frame" x="363" y="167" width="40" height="65"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="owl-login-arm-left" translatesAutoresizingMaskIntoConstraints="NO" id="P7O-lX-fPL">
-                                <rect key="frame" x="197" y="211" width="40" height="65"/>
+                                <rect key="frame" x="197" y="167" width="40" height="65"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zvf-wf-VFJ">
-                                <rect key="frame" x="30" y="200" width="540" height="260"/>
+                                <rect key="frame" x="30" y="156" width="540" height="260"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入用户名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zrz-ha-7PD">
                                         <rect key="frame" x="8" y="34" width="524" height="44"/>
@@ -95,14 +95,14 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_hand" translatesAutoresizingMaskIntoConstraints="NO" id="a1j-OL-B8P">
-                                <rect key="frame" x="187" y="181" width="40" height="40"/>
+                                <rect key="frame" x="187" y="137" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="7df-VA-tAJ"/>
                                     <constraint firstAttribute="height" constant="40" id="ffL-04-4bw"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_hand" translatesAutoresizingMaskIntoConstraints="NO" id="g8L-5J-isV">
-                                <rect key="frame" x="373" y="181" width="40" height="40"/>
+                                <rect key="frame" x="373" y="137" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="Cfr-Ag-GGx"/>
                                     <constraint firstAttribute="height" constant="40" id="cuZ-xM-QkV"/>
@@ -174,7 +174,7 @@
             </objects>
             <point key="canvasLocation" x="1267" y="2080"/>
         </scene>
-        <!--Contacts Table View Controller-->
+        <!--我的-->
         <scene sceneID="pPm-Tg-O3j">
             <objects>
                 <tableViewController storyboardIdentifier="ContactsTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mcS-F4-i7k" customClass="ContactsTableViewController" sceneMemberID="viewController">
@@ -281,7 +281,7 @@
                             <outlet property="delegate" destination="mcS-F4-i7k" id="bv3-ig-PLP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="n0Y-Rc-r6a"/>
+                    <navigationItem key="navigationItem" title="我的" id="n0Y-Rc-r6a"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="userImage" destination="opv-w0-7Ei" id="Piu-WI-cWy"/>

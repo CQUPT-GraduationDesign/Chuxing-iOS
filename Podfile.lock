@@ -23,6 +23,9 @@ PODS:
   - ReactiveCocoa/Core (2.1.8):
     - ReactiveCocoa/no-arc
   - ReactiveCocoa/no-arc (2.1.8)
+  - SDWebImage (3.7.5):
+    - SDWebImage/Core (= 3.7.5)
+  - SDWebImage/Core (3.7.5)
   - SVProgressHUD (2.0)
   - TWMessageBarManager (1.8.1)
   - YYModel (1.0.2)
@@ -32,6 +35,7 @@ DEPENDENCIES:
   - HYBNetworking (~> 3.0.0)
   - KMNavigationBarTransition (~> 0.0.4)
   - ReactiveCocoa (~> 2.1.8)
+  - SDWebImage
   - SVProgressHUD
   - TWMessageBarManager
   - YYModel
@@ -41,6 +45,7 @@ SPEC CHECKSUMS:
   HYBNetworking: f4f74200d78b6abb92128778ea8ef6e1b2de782f
   KMNavigationBarTransition: f121665408fb74fc2cf40541b06a8b578d69fc2d
   ReactiveCocoa: f89f2e009a87951b50321bf9feb958823fcc617e
+  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   SVProgressHUD: e9e7c893686a20da55a28015ed384d9425e15479
   TWMessageBarManager: fd84e7948ba7968a2b5d9454859135761214ec56
   YYModel: 7a467eff45ae3641c33efb136c262d33b6f48c1a

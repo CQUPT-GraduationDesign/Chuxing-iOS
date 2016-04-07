@@ -202,7 +202,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="exchangeBtn" destination="7Fg-9D-vEI" id="YHy-cu-0Rc"/>
-                        <outlet property="fromCityLabel" destination="AZ0-JR-XEN" id="GrO-JA-tJx"/>
+                        <outlet property="fromCityLabel" destination="agX-c1-tJW" id="NJ1-iF-Xb2"/>
                         <outlet property="fromLocation" destination="Krb-cH-4sF" id="9iL-sR-hEg"/>
                         <outlet property="searchBtn" destination="3or-LI-79b" id="7Hd-CX-hLg"/>
                         <outlet property="toCityLabel" destination="on7-EC-FsG" id="6Ht-em-iKi"/>

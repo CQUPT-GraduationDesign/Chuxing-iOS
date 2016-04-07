@@ -284,7 +284,7 @@
                     <navigationItem key="navigationItem" title="我的" id="n0Y-Rc-r6a"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="userImage" destination="opv-w0-7Ei" id="Piu-WI-cWy"/>
+                        <outlet property="userImage" destination="opv-w0-7Ei" id="Tlq-jq-Q7E"/>
                         <outlet property="userName" destination="Uvx-9L-Upa" id="PWt-7o-vSX"/>
                     </connections>
                 </tableViewController>

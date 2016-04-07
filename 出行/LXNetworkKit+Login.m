@@ -85,11 +85,11 @@
             
             [currentUser setToken:token];
             
-            NSString *data = [dic objectForKey:@"data"];
+            NSDictionary *data = [dic objectForKey:@"data"];
             if (data) {
-                NSDictionary *dataDic = [[NSDictionary alloc] initWithDictionary:responseObject];
+                NSDictionary *dataDic = [[NSDictionary alloc] initWithDictionary:data];
                 
-                NSString *name = [dataDic objectForKey:@"name"];
+                NSString *name = [dataDic objectForKey:@"username"];
                 NSString *email = [dataDic objectForKey:@"email"];
                 
                 [currentUser setName:name];

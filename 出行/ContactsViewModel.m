@@ -44,6 +44,8 @@
         [userDefaults setObject:user.email forKey:@"userEmail"];
         [userDefaults setObject:user.token forKey:@"userToken"];
         
+        [userDefaults setObject:@(arc4random() % 900) forKey:@"userID"];
+        
         [userDefaults synchronize];
         
         

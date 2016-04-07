@@ -8,6 +8,9 @@
 
 #import "ContactsTableViewController.h"
 #import "LXUtil.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <SDWebImage/SDWebImageManager.h>
+#import "LXUtil.h"
 
 @interface ContactsTableViewController ()
 
@@ -29,6 +32,9 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    self.userImage.layer.masksToBounds = YES;
+    self.userImage.layer.cornerRadius = 30;
+    
     self.userDefault = [NSUserDefaults standardUserDefaults];
     
 }
@@ -36,10 +42,21 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
+    [[SDWebImageManager sharedManager].imageDownloader setValue: nil forHTTPHeaderField:@"Accept"];
+    
+    
+    
     if ([self.userDefault boolForKey:@"isLogin"]) {
         [self.userName setText:[self.userDefault objectForKey:@"userName"]];
+        
+        [[SDWebImageManager sharedManager] downloadImageWithURL:[NSURL URLWithString:[@"http://7xr4g8.com1.z0.glb.clouddn.com/" stringByAppendingString:[NSString stringWithFormat:@"%ld", [[self.userDefault objectForKey:@"userID"] integerValue]]]] options:SDWebImageRetryFailed progress:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+            
+            self.userImage.image = [LXUtil reSizeImage:image toSize:CGSizeMake(60, 60)];
+        }];
+        //[self.userImage sd_setImageWithURL:[NSURL URLWithString:[@"http://7xr4g8.com1.z0.glb.clouddn.com/" stringByAppendingString:[NSString stringWithFormat:@"%d", arc4random() % 900]]]];
     } else {
         [self.userName setText:@"未登录"];
+        self.userImage.image = nil;
     }
 }
 
@@ -80,6 +97,7 @@
             // 清空所有的用户数据
             [LXUtil cleanUserInfo];
             [self.userName setText:@"未登录"];
+            self.userImage.image = nil;
         }];
         
         UIAlertController *alert = [UIAlertController  alertControllerWithTitle:@"退出登陆" message:@"确定要退出登陆吗" preferredStyle:UIAlertControllerStyleAlert];

@@ -7,9 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface LXUtil : NSObject
 
 + (void)cleanUserInfo;
+
++ (UIImage *)reSizeImage:(UIImage *)image toSize:(CGSize)reSize;
 
 @end

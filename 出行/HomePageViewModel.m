@@ -30,6 +30,10 @@
 
 - (void)initialize {
     
+    self.fromCity = @"北京";
+    self.toCity = @"兰州";
+    
+    
     
     self.exchangeCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         

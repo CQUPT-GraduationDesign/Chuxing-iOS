@@ -1,5 +1,6 @@
 platform :ios, '8.0'
 
+pod 'SDWebImage'
 pod 'SVProgressHUD'
 pod 'TWMessageBarManager'
 pod 'AFNetworking', '~> 3.0'

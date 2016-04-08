@@ -42,8 +42,6 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [[SDWebImageManager sharedManager].imageDownloader setValue: nil forHTTPHeaderField:@"Accept"];
-    
     
     
     if ([self.userDefault boolForKey:@"isLogin"]) {

@@ -23,6 +23,12 @@
 		82A43AF51CB0F8F20004B5EB /* LXViewModelService.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A43AF41CB0F8F20004B5EB /* LXViewModelService.m */; };
 		82A43AF71CB530ED0004B5EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82A43AF61CB530ED0004B5EB /* Assets.xcassets */; };
 		82A43AFB1CB546EB0004B5EB /* HomePageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A43AFA1CB546EB0004B5EB /* HomePageViewModel.m */; };
+		82A43B0A1CB791590004B5EB /* CityData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82A43AFE1CB791580004B5EB /* CityData.plist */; };
+		82A43B0B1CB791590004B5EB /* TLCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A43B001CB791580004B5EB /* TLCity.m */; };
+		82A43B0C1CB791590004B5EB /* TLCityGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A43B021CB791580004B5EB /* TLCityGroupCell.m */; };
+		82A43B0D1CB791590004B5EB /* TLCityHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A43B041CB791580004B5EB /* TLCityHeaderView.m */; };
+		82A43B0E1CB791590004B5EB /* TLCityPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A43B061CB791580004B5EB /* TLCityPickerController.m */; };
+		82A43B0F1CB791590004B5EB /* TLCityPickerSearchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A43B091CB791580004B5EB /* TLCityPickerSearchResultController.m */; };
 		82E4AFC71CA2796A00B9D608 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E4AFC51CA2796A00B9D608 /* RegisterViewController.m */; };
 		82E4AFC81CA2796A00B9D608 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82E4AFC61CA2796A00B9D608 /* RegisterViewController.xib */; };
 		82E4AFD21CA2C90C00B9D608 /* LXNetworkKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E4AFD11CA2C90C00B9D608 /* LXNetworkKit.m */; };
@@ -63,6 +69,18 @@
 		82A43AF61CB530ED0004B5EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82A43AF91CB546EB0004B5EB /* HomePageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewModel.h; sourceTree = "<group>"; };
 		82A43AFA1CB546EB0004B5EB /* HomePageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageViewModel.m; sourceTree = "<group>"; };
+		82A43AFE1CB791580004B5EB /* CityData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CityData.plist; sourceTree = "<group>"; };
+		82A43AFF1CB791580004B5EB /* TLCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCity.h; sourceTree = "<group>"; };
+		82A43B001CB791580004B5EB /* TLCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLCity.m; sourceTree = "<group>"; };
+		82A43B011CB791580004B5EB /* TLCityGroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCityGroupCell.h; sourceTree = "<group>"; };
+		82A43B021CB791580004B5EB /* TLCityGroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLCityGroupCell.m; sourceTree = "<group>"; };
+		82A43B031CB791580004B5EB /* TLCityHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCityHeaderView.h; sourceTree = "<group>"; };
+		82A43B041CB791580004B5EB /* TLCityHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLCityHeaderView.m; sourceTree = "<group>"; };
+		82A43B051CB791580004B5EB /* TLCityPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCityPickerController.h; sourceTree = "<group>"; };
+		82A43B061CB791580004B5EB /* TLCityPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLCityPickerController.m; sourceTree = "<group>"; };
+		82A43B071CB791580004B5EB /* TLCityPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCityPickerDelegate.h; sourceTree = "<group>"; };
+		82A43B081CB791580004B5EB /* TLCityPickerSearchResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCityPickerSearchResultController.h; sourceTree = "<group>"; };
+		82A43B091CB791580004B5EB /* TLCityPickerSearchResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLCityPickerSearchResultController.m; sourceTree = "<group>"; };
 		82E4AFC41CA2796A00B9D608 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		82E4AFC51CA2796A00B9D608 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		82E4AFC61CA2796A00B9D608 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
@@ -130,6 +148,7 @@
 		8235E0601C9B9D9900DF8EA2 /* 出行 */ = {
 			isa = PBXGroup;
 			children = (
+				82A43AFD1CB791580004B5EB /* TLCityPicker */,
 				8235E0641C9B9D9900DF8EA2 /* AppDelegate.h */,
 				8235E0651C9B9D9900DF8EA2 /* AppDelegate.m */,
 				82E4AFF61CA9684F00B9D608 /* Util */,
@@ -226,6 +245,25 @@
 				82E4AFEB1CA7AB4000B9D608 /* RegisterViewModel.m */,
 			);
 			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		82A43AFD1CB791580004B5EB /* TLCityPicker */ = {
+			isa = PBXGroup;
+			children = (
+				82A43AFE1CB791580004B5EB /* CityData.plist */,
+				82A43AFF1CB791580004B5EB /* TLCity.h */,
+				82A43B001CB791580004B5EB /* TLCity.m */,
+				82A43B011CB791580004B5EB /* TLCityGroupCell.h */,
+				82A43B021CB791580004B5EB /* TLCityGroupCell.m */,
+				82A43B031CB791580004B5EB /* TLCityHeaderView.h */,
+				82A43B041CB791580004B5EB /* TLCityHeaderView.m */,
+				82A43B051CB791580004B5EB /* TLCityPickerController.h */,
+				82A43B061CB791580004B5EB /* TLCityPickerController.m */,
+				82A43B071CB791580004B5EB /* TLCityPickerDelegate.h */,
+				82A43B081CB791580004B5EB /* TLCityPickerSearchResultController.h */,
+				82A43B091CB791580004B5EB /* TLCityPickerSearchResultController.m */,
+			);
+			path = TLCityPicker;
 			sourceTree = "<group>";
 		};
 		82E4AFCF1CA2C3FB00B9D608 /* Network */ = {
@@ -334,6 +372,7 @@
 				8235E07A1C9B9FC400DF8EA2 /* HomePage.storyboard in Resources */,
 				8235E0711C9B9D9900DF8EA2 /* LaunchScreen.storyboard in Resources */,
 				82E4AFC81CA2796A00B9D608 /* RegisterViewController.xib in Resources */,
+				82A43B0A1CB791590004B5EB /* CityData.plist in Resources */,
 				8235E0801C9BA00000DF8EA2 /* ContactsPage.storyboard in Resources */,
 				82A43AF71CB530ED0004B5EB /* Assets.xcassets in Resources */,
 				8235E07D1C9B9FDE00DF8EA2 /* FavouritePage.storyboard in Resources */,
@@ -406,11 +445,16 @@
 				82E4AFC71CA2796A00B9D608 /* RegisterViewController.m in Sources */,
 				82E4AFEC1CA7AB4000B9D608 /* RegisterViewModel.m in Sources */,
 				82E4AFF21CA95DCC00B9D608 /* User.m in Sources */,
+				82A43B0B1CB791590004B5EB /* TLCity.m in Sources */,
 				82E4AFD51CA2CB8F00B9D608 /* LXNetworkKit+Login.m in Sources */,
+				82A43B0F1CB791590004B5EB /* TLCityPickerSearchResultController.m in Sources */,
+				82A43B0D1CB791590004B5EB /* TLCityHeaderView.m in Sources */,
+				82A43B0C1CB791590004B5EB /* TLCityGroupCell.m in Sources */,
 				82A43AF51CB0F8F20004B5EB /* LXViewModelService.m in Sources */,
 				8235E0B01C9BA2EF00DF8EA2 /* FavourotePageViewController.m in Sources */,
 				8235E0B31C9BA30400DF8EA2 /* ContactsPageViewController.m in Sources */,
 				82E4AFF91CA9686400B9D608 /* LXUtil.m in Sources */,
+				82A43B0E1CB791590004B5EB /* TLCityPickerController.m in Sources */,
 				82E4AFD21CA2C90C00B9D608 /* LXNetworkKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

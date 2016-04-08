@@ -11,7 +11,6 @@
 @interface HomePageViewModel()
 
 
-
 @property(nonatomic, strong, readwrite) RACCommand *exchangeCommand;
 @property(nonatomic, strong, readwrite) RACCommand *searchCommand;
 

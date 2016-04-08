@@ -15,4 +15,8 @@
 
 + (UIImage *)reSizeImage:(UIImage *)image toSize:(CGSize)reSize;
 
++ (NSArray *)getHotCityID;
+
++ (NSString *)getCurrentCityID;
+
 @end

@@ -10,6 +10,7 @@
 #import "ContactsPageViewController.h"
 #import "HomePageViewModel.h"
 #import "TLCityPickerController.h"
+#import "LXUtil.h"
 
 @interface HomePageViewController () <TLCityPickerDelegate>
 
@@ -45,6 +46,8 @@
     [self.toLocation addGestureRecognizer:tapTo];
     
     
+    //NSLog(@"%@", [LXUtil getHotCityID]);
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,9 +62,9 @@
     TLCityPickerController *cityPickerVC = [[TLCityPickerController alloc] init];
     [cityPickerVC setDelegate:self];
     
-    cityPickerVC.locationCityID = @"1400010000";
+    cityPickerVC.locationCityID = [LXUtil getCurrentCityID];
     //    cityPickerVC.commonCitys = [[NSMutableArray alloc] initWithArray: @[@"1400010000", @"100010000"]];        // 最近访问城市，如果不设置，将自动管理
-    cityPickerVC.hotCitys = @[@"100010000", @"200010000", @"300210000", @"600010000", @"300110000"];
+    cityPickerVC.hotCitys = [LXUtil getHotCityID];
     
     [self presentViewController:[[UINavigationController alloc] initWithRootViewController:cityPickerVC] animated:YES completion:^{
         
@@ -77,9 +80,9 @@
     TLCityPickerController *cityPickerVC = [[TLCityPickerController alloc] init];
     [cityPickerVC setDelegate:self];
     
-    cityPickerVC.locationCityID = @"1400010000";
+    cityPickerVC.locationCityID = [LXUtil getCurrentCityID];
     //    cityPickerVC.commonCitys = [[NSMutableArray alloc] initWithArray: @[@"1400010000", @"100010000"]];        // 最近访问城市，如果不设置，将自动管理
-    cityPickerVC.hotCitys = @[@"100010000", @"200010000", @"300210000", @"600010000", @"300110000"];
+    cityPickerVC.hotCitys = [LXUtil getHotCityID];
     
     //[self.navigationController pushViewController:cityPickerVC animated:YES];
     //[self.navigationController presentViewController:cityPickerVC animated:YES completion:nil];

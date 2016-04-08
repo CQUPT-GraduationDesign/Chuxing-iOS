@@ -40,6 +40,7 @@
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
     [self.tableView registerClass:[TLCityGroupCell class] forCellReuseIdentifier:@"TLCityGroupCell"];
     [self.tableView registerClass:[TLCityHeaderView class] forHeaderFooterViewReuseIdentifier:@"TLCityHeaderView"];
+    
 }
 
 
@@ -79,6 +80,7 @@
     TLCity *city =  [group.arrayCitys objectAtIndex:indexPath.row];
     [cell.textLabel setText:city.cityName];
     
+
     return cell;
 }
 
@@ -338,5 +340,6 @@
     }
     return _commonCitys;
 }
+
 
 @end

@@ -30,6 +30,8 @@
 		82A43B0D1CB791590004B5EB /* TLCityHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A43B041CB791580004B5EB /* TLCityHeaderView.m */; };
 		82A43B0E1CB791590004B5EB /* TLCityPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A43B061CB791580004B5EB /* TLCityPickerController.m */; };
 		82A43B0F1CB791590004B5EB /* TLCityPickerSearchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A43B091CB791580004B5EB /* TLCityPickerSearchResultController.m */; };
+		82AACDDB1CBA74FD00CD3FD2 /* SearchResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AACDD91CBA74FD00CD3FD2 /* SearchResultTableViewCell.m */; };
+		82AACDDC1CBA74FD00CD3FD2 /* SearchResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82AACDDA1CBA74FD00CD3FD2 /* SearchResultTableViewCell.xib */; };
 		82D086F21CBA0AF100ECB73B /* SearchResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D086F11CBA0AF100ECB73B /* SearchResultModel.m */; };
 		82D086F51CBA0CF200ECB73B /* SubPathModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D086F41CBA0CF200ECB73B /* SubPathModel.m */; };
 		82D086F81CBA226900ECB73B /* PathModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D086F71CBA226900ECB73B /* PathModel.m */; };
@@ -41,7 +43,7 @@
 		82D087131CBA33FD00ECB73B /* DLScrollTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D087091CBA33FD00ECB73B /* DLScrollTabbarView.m */; };
 		82D087141CBA33FD00ECB73B /* DLTabedSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D0870C1CBA33FD00ECB73B /* DLTabedSlideView.m */; };
 		82D087151CBA33FD00ECB73B /* DLUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D0870E1CBA33FD00ECB73B /* DLUtility.m */; };
-		82D087181CBA36E600ECB73B /* SearchResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D087171CBA36E600ECB73B /* SearchResultTableViewController.m */; };
+		82D0871E1CBA6FAC00ECB73B /* SearchResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D0871D1CBA6FAC00ECB73B /* SearchResultTableViewController.m */; };
 		82E4AFC71CA2796A00B9D608 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E4AFC51CA2796A00B9D608 /* RegisterViewController.m */; };
 		82E4AFC81CA2796A00B9D608 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82E4AFC61CA2796A00B9D608 /* RegisterViewController.xib */; };
 		82E4AFD21CA2C90C00B9D608 /* LXNetworkKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E4AFD11CA2C90C00B9D608 /* LXNetworkKit.m */; };
@@ -96,6 +98,9 @@
 		82A43B071CB791580004B5EB /* TLCityPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCityPickerDelegate.h; sourceTree = "<group>"; };
 		82A43B081CB791580004B5EB /* TLCityPickerSearchResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCityPickerSearchResultController.h; sourceTree = "<group>"; };
 		82A43B091CB791580004B5EB /* TLCityPickerSearchResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLCityPickerSearchResultController.m; sourceTree = "<group>"; };
+		82AACDD81CBA74FD00CD3FD2 /* SearchResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultTableViewCell.h; sourceTree = "<group>"; };
+		82AACDD91CBA74FD00CD3FD2 /* SearchResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultTableViewCell.m; sourceTree = "<group>"; };
+		82AACDDA1CBA74FD00CD3FD2 /* SearchResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultTableViewCell.xib; sourceTree = "<group>"; };
 		82D086F01CBA0AF100ECB73B /* SearchResultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultModel.h; sourceTree = "<group>"; };
 		82D086F11CBA0AF100ECB73B /* SearchResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultModel.m; sourceTree = "<group>"; };
 		82D086F31CBA0CF200ECB73B /* SubPathModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubPathModel.h; sourceTree = "<group>"; };
@@ -120,8 +125,8 @@
 		82D0870C1CBA33FD00ECB73B /* DLTabedSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLTabedSlideView.m; sourceTree = "<group>"; };
 		82D0870D1CBA33FD00ECB73B /* DLUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLUtility.h; sourceTree = "<group>"; };
 		82D0870E1CBA33FD00ECB73B /* DLUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLUtility.m; sourceTree = "<group>"; };
-		82D087161CBA36E600ECB73B /* SearchResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultTableViewController.h; sourceTree = "<group>"; };
-		82D087171CBA36E600ECB73B /* SearchResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultTableViewController.m; sourceTree = "<group>"; };
+		82D0871C1CBA6FAC00ECB73B /* SearchResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultTableViewController.h; sourceTree = "<group>"; };
+		82D0871D1CBA6FAC00ECB73B /* SearchResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultTableViewController.m; sourceTree = "<group>"; };
 		82E4AFC41CA2796A00B9D608 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		82E4AFC51CA2796A00B9D608 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		82E4AFC61CA2796A00B9D608 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
@@ -234,8 +239,11 @@
 				8235E0AC1C9BA2CD00DF8EA2 /* HomePageViewController.m */,
 				82D086F91CBA313D00ECB73B /* SearchResultViewController.h */,
 				82D086FA1CBA313D00ECB73B /* SearchResultViewController.m */,
-				82D087161CBA36E600ECB73B /* SearchResultTableViewController.h */,
-				82D087171CBA36E600ECB73B /* SearchResultTableViewController.m */,
+				82D0871C1CBA6FAC00ECB73B /* SearchResultTableViewController.h */,
+				82D0871D1CBA6FAC00ECB73B /* SearchResultTableViewController.m */,
+				82AACDD81CBA74FD00CD3FD2 /* SearchResultTableViewCell.h */,
+				82AACDD91CBA74FD00CD3FD2 /* SearchResultTableViewCell.m */,
+				82AACDDA1CBA74FD00CD3FD2 /* SearchResultTableViewCell.xib */,
 			);
 			name = HomePageViewControllers;
 			sourceTree = "<group>";
@@ -462,6 +470,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82AACDDC1CBA74FD00CD3FD2 /* SearchResultTableViewCell.xib in Resources */,
 				8235E07A1C9B9FC400DF8EA2 /* HomePage.storyboard in Resources */,
 				8235E0711C9B9D9900DF8EA2 /* LaunchScreen.storyboard in Resources */,
 				82E4AFC81CA2796A00B9D608 /* RegisterViewController.xib in Resources */,
@@ -560,8 +569,9 @@
 				82E4AFF91CA9686400B9D608 /* LXUtil.m in Sources */,
 				82D087101CBA33FD00ECB73B /* DLCustomSlideView.m in Sources */,
 				82A43B0E1CB791590004B5EB /* TLCityPickerController.m in Sources */,
-				82D087181CBA36E600ECB73B /* SearchResultTableViewController.m in Sources */,
+				82D0871E1CBA6FAC00ECB73B /* SearchResultTableViewController.m in Sources */,
 				82E4AFD21CA2C90C00B9D608 /* LXNetworkKit.m in Sources */,
+				82AACDDB1CBA74FD00CD3FD2 /* SearchResultTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,7 +13,7 @@
 
 @property(nonatomic, assign) NSInteger code;
 @property(nonatomic, copy) NSString *message;
-@property(nonatomic, strong) NSArray<PathModel *> *data;
+@property(nonatomic, copy) NSMutableArray<PathModel *> *data;
 
 
 @end

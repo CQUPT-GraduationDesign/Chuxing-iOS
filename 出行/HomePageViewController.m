@@ -12,6 +12,8 @@
 #import "TLCityPickerController.h"
 #import "LXUtil.h"
 #import "SearchResultViewController.h"
+#import "SearchResultModel.h"
+
 
 @interface HomePageViewController () <TLCityPickerDelegate>
 
@@ -115,9 +117,10 @@
     }];
     
     [[self.searchBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-        [[self.viewModel.searchCommand execute:nil] subscribeCompleted:^{
+        [[self.viewModel.searchCommand execute:nil] subscribeNext:^(SearchResultModel *model) {
             // 跳转到搜索结果页面
             SearchResultViewController *view = [[SearchResultViewController alloc] init];
+            view.dataSource = model.data;
             [self.navigationController pushViewController:view animated:YES];
         }];
     }];

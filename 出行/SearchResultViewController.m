@@ -50,30 +50,25 @@
     switch (index) {
         case 0:
         {
-            //SearchResultTableViewController *ctrl = [[SearchResultTableViewController alloc] init];
-            UIViewController *ctrl = [[UIViewController alloc] init];
+            SearchResultTableViewController *ctrl = [[SearchResultTableViewController alloc] init];
+            ctrl.dataSource = self.dataSource;
             
-            ctrl.view.backgroundColor = [UIColor blueColor];
             return ctrl;
         }
         case 1:
         {
-            //SearchResultTableViewController *ctrl = [[SearchResultTableViewController alloc] init];
-            UIViewController *ctrl = [[UIViewController alloc] init];
+            SearchResultTableViewController *ctrl = [[SearchResultTableViewController alloc] init];
             
-            ctrl.view.backgroundColor = [UIColor redColor];
             return ctrl;
         }
         case 2:
         {
-            UIViewController *ctrl = [[UIViewController alloc] init];
-            //SearchResultTableViewController *ctrl = [[SearchResultTableViewController alloc] init];
+            SearchResultTableViewController *ctrl = [[SearchResultTableViewController alloc] init];
             return ctrl;
         }
         case 3:
         {
-            UIViewController *ctrl = [[UIViewController alloc] init];
-            //SearchResultTableViewController *ctrl = [[SearchResultTableViewController alloc] init];
+            SearchResultTableViewController *ctrl = [[SearchResultTableViewController alloc] init];
             return ctrl;
         }
             

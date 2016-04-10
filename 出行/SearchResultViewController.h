@@ -11,6 +11,8 @@
 
 @interface SearchResultViewController : UIViewController<DLTabedSlideViewDelegate>
 
+@property(nonatomic, strong) NSMutableArray *dataSource;
+
 @property(nonatomic, strong) DLTabedSlideView *tabedSlideView;
 
 @end

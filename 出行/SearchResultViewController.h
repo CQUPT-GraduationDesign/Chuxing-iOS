@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DLTabedSlideView.h"
 
-@interface SearchResultViewController : UIViewController
+@interface SearchResultViewController : UIViewController<DLTabedSlideViewDelegate>
+
+@property(nonatomic, strong) DLTabedSlideView *tabedSlideView;
 
 @end

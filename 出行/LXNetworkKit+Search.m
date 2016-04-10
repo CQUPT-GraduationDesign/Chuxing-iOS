@@ -9,6 +9,7 @@
 #import "LXNetworkKit+Search.h"
 #import <YYModel/YYModel.h>
 #import "SearchResultModel.h"
+#import "TWMessageBarManager.h"
 
 @implementation LXNetworkKit (Search)
 
@@ -33,6 +34,9 @@
                 [subscriber sendNext:model];
                 [subscriber sendCompleted];
             } else {
+                
+                [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"失败" description:model.message type:TWMessageBarMessageTypeError];
+                
                 [subscriber sendNext:nil];
                 [subscriber sendCompleted];
             }
@@ -41,8 +45,12 @@
             
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            
+            [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"失败" description:[error localizedDescription] type:TWMessageBarMessageTypeError];
+            
             [SVProgressHUD dismiss];
             [subscriber sendError:error];
+            
             
         }];
         

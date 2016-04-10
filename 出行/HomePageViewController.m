@@ -11,6 +11,7 @@
 #import "HomePageViewModel.h"
 #import "TLCityPickerController.h"
 #import "LXUtil.h"
+#import "SearchResultViewController.h"
 
 @interface HomePageViewController () <TLCityPickerDelegate>
 
@@ -18,10 +19,10 @@
 
 @property (weak, nonatomic) IBOutlet UIView *fromLocation;
 @property (weak, nonatomic) IBOutlet UIView *toLocation;
-@property (weak, nonatomic) IBOutlet UIImageView *exchangeBtn;
-@property (weak, nonatomic) IBOutlet UIButton *searchBtn;
+@property (weak, nonatomic) IBOutlet UIView *exchangeView;
 @property (weak, nonatomic) IBOutlet UILabel *fromCityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *toCityLabel;
+@property (weak, nonatomic) IBOutlet UIButton *searchBtn;
 
 @property (nonatomic, assign) BOOL isFromBtn;
 
@@ -45,6 +46,8 @@
     UITapGestureRecognizer *tapTo = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toTapped)];
     [self.toLocation addGestureRecognizer:tapTo];
     
+    UITapGestureRecognizer *tapExchange = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(exchangeTapped)];
+    [self.exchangeView addGestureRecognizer:tapExchange];
     
     //NSLog(@"%@", [LXUtil getHotCityID]);
     
@@ -55,43 +58,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)fromTapped {
-    
-    self.isFromBtn = YES;
-    
-    TLCityPickerController *cityPickerVC = [[TLCityPickerController alloc] init];
-    [cityPickerVC setDelegate:self];
-    
-    cityPickerVC.locationCityID = [LXUtil getCurrentCityID];
-    //    cityPickerVC.commonCitys = [[NSMutableArray alloc] initWithArray: @[@"1400010000", @"100010000"]];        // 最近访问城市，如果不设置，将自动管理
-    cityPickerVC.hotCitys = [LXUtil getHotCityID];
-    
-    [self presentViewController:[[UINavigationController alloc] initWithRootViewController:cityPickerVC] animated:YES completion:^{
-        
-    }];
+- (void)fromTapped {}
 
-    
-}
+- (void)toTapped {}
 
-- (void)toTapped {
-    
-    self.isFromBtn = NO;
-    
-    TLCityPickerController *cityPickerVC = [[TLCityPickerController alloc] init];
-    [cityPickerVC setDelegate:self];
-    
-    cityPickerVC.locationCityID = [LXUtil getCurrentCityID];
-    //    cityPickerVC.commonCitys = [[NSMutableArray alloc] initWithArray: @[@"1400010000", @"100010000"]];        // 最近访问城市，如果不设置，将自动管理
-    cityPickerVC.hotCitys = [LXUtil getHotCityID];
-    
-    //[self.navigationController pushViewController:cityPickerVC animated:YES];
-    //[self.navigationController presentViewController:cityPickerVC animated:YES completion:nil];
-    [self presentViewController:[[UINavigationController alloc] initWithRootViewController:cityPickerVC] animated:YES completion:^{
-
-    }];
-    
-}
-
+- (void)exchangeTapped {}
 
 
 - (void)bindViewModel {
@@ -100,12 +71,57 @@
         self.viewModel = [[HomePageViewModel alloc] init];
     }
     
-    [RACObserve(self.viewModel, fromCity) subscribeNext:^(NSString *str) {
-        [self.fromCityLabel setText:str];
+    [RACObserve(self.viewModel, fromCity) subscribeNext:^(TLCity *city) {
+        [self.fromCityLabel setText:city.cityName];
     }];
-    [RACObserve(self.viewModel, toCity) subscribeNext:^(NSString *str) {
-        [self.toCityLabel setText:str];
+    [RACObserve(self.viewModel, toCity) subscribeNext:^(TLCity *city) {
+        [self.toCityLabel setText:city.cityName];
     }];
+    
+    [[self rac_signalForSelector:@selector(exchangeTapped)] subscribeNext:^(id x) {
+        [self.viewModel.exchangeCommand execute:nil];
+    }];
+    
+    [[self rac_signalForSelector:@selector(toTapped)] subscribeNext:^(id x) {
+        [[self.viewModel.fromCityTappedCommand execute:nil] subscribeCompleted:^{
+            self.isFromBtn = NO;
+            
+            TLCityPickerController *cityPickerVC = [[TLCityPickerController alloc] init];
+            [cityPickerVC setDelegate:self];
+            
+            cityPickerVC.locationCityID = [LXUtil getCurrentCityID];
+            cityPickerVC.hotCitys = [LXUtil getHotCityID];
+
+            [self presentViewController:[[UINavigationController alloc] initWithRootViewController:cityPickerVC] animated:YES completion:^{
+                
+            }];
+        }];
+    }];
+    
+    [[self rac_signalForSelector:@selector(fromTapped)] subscribeNext:^(id x) {
+        [[self.viewModel.toCityTappedCommand execute:nil]subscribeCompleted:^{
+            self.isFromBtn = YES;
+            
+            TLCityPickerController *cityPickerVC = [[TLCityPickerController alloc] init];
+            [cityPickerVC setDelegate:self];
+            
+            cityPickerVC.locationCityID = [LXUtil getCurrentCityID];
+            cityPickerVC.hotCitys = [LXUtil getHotCityID];
+
+            [self presentViewController:[[UINavigationController alloc] initWithRootViewController:cityPickerVC] animated:YES completion:^{
+                
+            }];
+        }];
+    }];
+    
+    [[self.searchBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        [[self.viewModel.searchCommand execute:nil] subscribeCompleted:^{
+            // 跳转到搜索结果页面
+            SearchResultViewController *view = [[SearchResultViewController alloc] init];
+            [self.navigationController pushViewController:view animated:YES];
+        }];
+    }];
+    
     
 }
 
@@ -116,11 +132,11 @@
     
     if (self.isFromBtn) {
         
-        self.viewModel.fromCity = [city cityName];
+        self.viewModel.fromCity = city;
         
     } else {
         
-        self.viewModel.toCity = [city cityName];
+        self.viewModel.toCity = city;
     }
     
     [cityPickerViewController dismissViewControllerAnimated:YES completion:nil];

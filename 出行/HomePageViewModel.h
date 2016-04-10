@@ -9,13 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "LXViewModel.h"
 
+@class TLCity;
 
 @interface HomePageViewModel : LXViewModel
 
-@property(nonatomic, copy) NSString *fromCity;
-@property(nonatomic, copy) NSString *toCity;
+@property(nonatomic, strong) TLCity *fromCity;
+@property(nonatomic, strong) TLCity *toCity;
 
 @property(nonatomic, strong, readonly) RACCommand *exchangeCommand;
 @property(nonatomic, strong, readonly) RACCommand *searchCommand;
+@property(nonatomic, strong, readonly) RACCommand *fromCityTappedCommand;
+@property(nonatomic, strong, readonly) RACCommand *toCityTappedCommand;
 
 @end

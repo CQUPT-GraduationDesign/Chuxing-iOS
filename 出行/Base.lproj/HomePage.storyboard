@@ -36,7 +36,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="北京" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agX-c1-tJW">
                                                         <rect key="frame" x="82" y="14" width="52" height="32"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_right" translatesAutoresizingMaskIntoConstraints="NO" id="goE-gV-TeR">
@@ -87,7 +87,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="兰州" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="on7-EC-FsG">
                                                         <rect key="frame" x="82" y="14" width="52" height="32"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_right" translatesAutoresizingMaskIntoConstraints="NO" id="EIT-HA-VgC">
@@ -201,10 +201,10 @@
                     <navigationItem key="navigationItem" title="查询" id="xEP-0f-khZ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="exchangeBtn" destination="7Fg-9D-vEI" id="YHy-cu-0Rc"/>
+                        <outlet property="exchangeView" destination="Gie-By-HQV" id="Ztp-4A-bQe"/>
                         <outlet property="fromCityLabel" destination="agX-c1-tJW" id="NJ1-iF-Xb2"/>
                         <outlet property="fromLocation" destination="Krb-cH-4sF" id="9iL-sR-hEg"/>
-                        <outlet property="searchBtn" destination="3or-LI-79b" id="7Hd-CX-hLg"/>
+                        <outlet property="searchBtn" destination="3or-LI-79b" id="9TS-Jg-4m0"/>
                         <outlet property="toCityLabel" destination="on7-EC-FsG" id="6Ht-em-iKi"/>
                         <outlet property="toLocation" destination="Hyn-d3-oZO" id="weC-cM-KDO"/>
                     </connections>

@@ -17,6 +17,7 @@ PODS:
   - HYBNetworking (3.0.0):
     - AFNetworking (~> 3.0.0)
   - KMNavigationBarTransition (0.0.4)
+  - Masonry (1.0.0)
   - ReactiveCocoa (2.1.8):
     - ReactiveCocoa/Core (= 2.1.8)
     - ReactiveCocoa/no-arc (= 2.1.8)
@@ -34,6 +35,7 @@ DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - HYBNetworking (~> 3.0.0)
   - KMNavigationBarTransition (~> 0.0.4)
+  - Masonry
   - ReactiveCocoa (~> 2.1.8)
   - SDWebImage
   - SVProgressHUD
@@ -44,6 +46,7 @@ SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   HYBNetworking: f4f74200d78b6abb92128778ea8ef6e1b2de782f
   KMNavigationBarTransition: f121665408fb74fc2cf40541b06a8b578d69fc2d
+  Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
   ReactiveCocoa: f89f2e009a87951b50321bf9feb958823fcc617e
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   SVProgressHUD: e9e7c893686a20da55a28015ed384d9425e15479

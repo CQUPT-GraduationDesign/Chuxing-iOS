@@ -1,5 +1,6 @@
 platform :ios, '8.0'
 
+pod 'Masonry'
 pod 'SDWebImage'
 pod 'SVProgressHUD'
 pod 'TWMessageBarManager'

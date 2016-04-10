@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		77113CC78E7EE892DF0A8809 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 174FD94BB88C45F626FC237E /* libPods.a */; };
+		8217BBF41CB9181A00C9F8C8 /* LXNetworkKit+Search.m in Sources */ = {isa = PBXBuildFile; fileRef = 8217BBF31CB9181A00C9F8C8 /* LXNetworkKit+Search.m */; };
 		8235E0631C9B9D9900DF8EA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8235E0621C9B9D9900DF8EA2 /* main.m */; };
 		8235E0661C9B9D9900DF8EA2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8235E0651C9B9D9900DF8EA2 /* AppDelegate.m */; };
 		8235E06C1C9B9D9900DF8EA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8235E06A1C9B9D9900DF8EA2 /* Main.storyboard */; };
@@ -29,6 +30,17 @@
 		82A43B0D1CB791590004B5EB /* TLCityHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A43B041CB791580004B5EB /* TLCityHeaderView.m */; };
 		82A43B0E1CB791590004B5EB /* TLCityPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A43B061CB791580004B5EB /* TLCityPickerController.m */; };
 		82A43B0F1CB791590004B5EB /* TLCityPickerSearchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A43B091CB791580004B5EB /* TLCityPickerSearchResultController.m */; };
+		82D086F21CBA0AF100ECB73B /* SearchResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D086F11CBA0AF100ECB73B /* SearchResultModel.m */; };
+		82D086F51CBA0CF200ECB73B /* SubPathModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D086F41CBA0CF200ECB73B /* SubPathModel.m */; };
+		82D086F81CBA226900ECB73B /* PathModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D086F71CBA226900ECB73B /* PathModel.m */; };
+		82D086FB1CBA313D00ECB73B /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D086FA1CBA313D00ECB73B /* SearchResultViewController.m */; };
+		82D0870F1CBA33FD00ECB73B /* DLLRUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D087001CBA33FD00ECB73B /* DLLRUCache.m */; };
+		82D087101CBA33FD00ECB73B /* DLCustomSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D087021CBA33FD00ECB73B /* DLCustomSlideView.m */; };
+		82D087111CBA33FD00ECB73B /* DLSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D087041CBA33FD00ECB73B /* DLSlideView.m */; };
+		82D087121CBA33FD00ECB73B /* DLFixedTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D087071CBA33FD00ECB73B /* DLFixedTabbarView.m */; };
+		82D087131CBA33FD00ECB73B /* DLScrollTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D087091CBA33FD00ECB73B /* DLScrollTabbarView.m */; };
+		82D087141CBA33FD00ECB73B /* DLTabedSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D0870C1CBA33FD00ECB73B /* DLTabedSlideView.m */; };
+		82D087151CBA33FD00ECB73B /* DLUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D0870E1CBA33FD00ECB73B /* DLUtility.m */; };
 		82E4AFC71CA2796A00B9D608 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E4AFC51CA2796A00B9D608 /* RegisterViewController.m */; };
 		82E4AFC81CA2796A00B9D608 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82E4AFC61CA2796A00B9D608 /* RegisterViewController.xib */; };
 		82E4AFD21CA2C90C00B9D608 /* LXNetworkKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E4AFD11CA2C90C00B9D608 /* LXNetworkKit.m */; };
@@ -43,6 +55,8 @@
 		06CD5CEABA542A6AEB29CA53 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		174FD94BB88C45F626FC237E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D77B45FFC214F8D8318277A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		8217BBF21CB9181A00C9F8C8 /* LXNetworkKit+Search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LXNetworkKit+Search.h"; sourceTree = "<group>"; };
+		8217BBF31CB9181A00C9F8C8 /* LXNetworkKit+Search.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LXNetworkKit+Search.m"; sourceTree = "<group>"; };
 		8235E05E1C9B9D9900DF8EA2 /* 出行.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "出行.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8235E0621C9B9D9900DF8EA2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8235E0641C9B9D9900DF8EA2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,6 +95,30 @@
 		82A43B071CB791580004B5EB /* TLCityPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCityPickerDelegate.h; sourceTree = "<group>"; };
 		82A43B081CB791580004B5EB /* TLCityPickerSearchResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCityPickerSearchResultController.h; sourceTree = "<group>"; };
 		82A43B091CB791580004B5EB /* TLCityPickerSearchResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLCityPickerSearchResultController.m; sourceTree = "<group>"; };
+		82D086F01CBA0AF100ECB73B /* SearchResultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultModel.h; sourceTree = "<group>"; };
+		82D086F11CBA0AF100ECB73B /* SearchResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultModel.m; sourceTree = "<group>"; };
+		82D086F31CBA0CF200ECB73B /* SubPathModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubPathModel.h; sourceTree = "<group>"; };
+		82D086F41CBA0CF200ECB73B /* SubPathModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubPathModel.m; sourceTree = "<group>"; };
+		82D086F61CBA226900ECB73B /* PathModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathModel.h; sourceTree = "<group>"; };
+		82D086F71CBA226900ECB73B /* PathModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathModel.m; sourceTree = "<group>"; };
+		82D086F91CBA313D00ECB73B /* SearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
+		82D086FA1CBA313D00ECB73B /* SearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
+		82D086FE1CBA33FD00ECB73B /* DLCacheProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLCacheProtocol.h; sourceTree = "<group>"; };
+		82D086FF1CBA33FD00ECB73B /* DLLRUCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLLRUCache.h; sourceTree = "<group>"; };
+		82D087001CBA33FD00ECB73B /* DLLRUCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLLRUCache.m; sourceTree = "<group>"; };
+		82D087011CBA33FD00ECB73B /* DLCustomSlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLCustomSlideView.h; sourceTree = "<group>"; };
+		82D087021CBA33FD00ECB73B /* DLCustomSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLCustomSlideView.m; sourceTree = "<group>"; };
+		82D087031CBA33FD00ECB73B /* DLSlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSlideView.h; sourceTree = "<group>"; };
+		82D087041CBA33FD00ECB73B /* DLSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLSlideView.m; sourceTree = "<group>"; };
+		82D087061CBA33FD00ECB73B /* DLFixedTabbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLFixedTabbarView.h; sourceTree = "<group>"; };
+		82D087071CBA33FD00ECB73B /* DLFixedTabbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLFixedTabbarView.m; sourceTree = "<group>"; };
+		82D087081CBA33FD00ECB73B /* DLScrollTabbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLScrollTabbarView.h; sourceTree = "<group>"; };
+		82D087091CBA33FD00ECB73B /* DLScrollTabbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLScrollTabbarView.m; sourceTree = "<group>"; };
+		82D0870A1CBA33FD00ECB73B /* DLSlideTabbarProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSlideTabbarProtocol.h; sourceTree = "<group>"; };
+		82D0870B1CBA33FD00ECB73B /* DLTabedSlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTabedSlideView.h; sourceTree = "<group>"; };
+		82D0870C1CBA33FD00ECB73B /* DLTabedSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLTabedSlideView.m; sourceTree = "<group>"; };
+		82D0870D1CBA33FD00ECB73B /* DLUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLUtility.h; sourceTree = "<group>"; };
+		82D0870E1CBA33FD00ECB73B /* DLUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLUtility.m; sourceTree = "<group>"; };
 		82E4AFC41CA2796A00B9D608 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		82E4AFC51CA2796A00B9D608 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		82E4AFC61CA2796A00B9D608 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
@@ -148,6 +186,7 @@
 		8235E0601C9B9D9900DF8EA2 /* 出行 */ = {
 			isa = PBXGroup;
 			children = (
+				82D086FC1CBA33FD00ECB73B /* DLSlideView */,
 				82A43AFD1CB791580004B5EB /* TLCityPicker */,
 				8235E0641C9B9D9900DF8EA2 /* AppDelegate.h */,
 				8235E0651C9B9D9900DF8EA2 /* AppDelegate.m */,
@@ -190,6 +229,8 @@
 				82A43AF81CB546D70004B5EB /* ViewModel */,
 				8235E0AB1C9BA2CD00DF8EA2 /* HomePageViewController.h */,
 				8235E0AC1C9BA2CD00DF8EA2 /* HomePageViewController.m */,
+				82D086F91CBA313D00ECB73B /* SearchResultViewController.h */,
+				82D086FA1CBA313D00ECB73B /* SearchResultViewController.m */,
 			);
 			name = HomePageViewControllers;
 			sourceTree = "<group>";
@@ -266,6 +307,45 @@
 			path = TLCityPicker;
 			sourceTree = "<group>";
 		};
+		82D086FC1CBA33FD00ECB73B /* DLSlideView */ = {
+			isa = PBXGroup;
+			children = (
+				82D086FD1CBA33FD00ECB73B /* DLCache */,
+				82D087011CBA33FD00ECB73B /* DLCustomSlideView.h */,
+				82D087021CBA33FD00ECB73B /* DLCustomSlideView.m */,
+				82D087031CBA33FD00ECB73B /* DLSlideView.h */,
+				82D087041CBA33FD00ECB73B /* DLSlideView.m */,
+				82D087051CBA33FD00ECB73B /* DLTabbarView */,
+				82D0870B1CBA33FD00ECB73B /* DLTabedSlideView.h */,
+				82D0870C1CBA33FD00ECB73B /* DLTabedSlideView.m */,
+				82D0870D1CBA33FD00ECB73B /* DLUtility.h */,
+				82D0870E1CBA33FD00ECB73B /* DLUtility.m */,
+			);
+			path = DLSlideView;
+			sourceTree = "<group>";
+		};
+		82D086FD1CBA33FD00ECB73B /* DLCache */ = {
+			isa = PBXGroup;
+			children = (
+				82D086FE1CBA33FD00ECB73B /* DLCacheProtocol.h */,
+				82D086FF1CBA33FD00ECB73B /* DLLRUCache.h */,
+				82D087001CBA33FD00ECB73B /* DLLRUCache.m */,
+			);
+			path = DLCache;
+			sourceTree = "<group>";
+		};
+		82D087051CBA33FD00ECB73B /* DLTabbarView */ = {
+			isa = PBXGroup;
+			children = (
+				82D087061CBA33FD00ECB73B /* DLFixedTabbarView.h */,
+				82D087071CBA33FD00ECB73B /* DLFixedTabbarView.m */,
+				82D087081CBA33FD00ECB73B /* DLScrollTabbarView.h */,
+				82D087091CBA33FD00ECB73B /* DLScrollTabbarView.m */,
+				82D0870A1CBA33FD00ECB73B /* DLSlideTabbarProtocol.h */,
+			);
+			path = DLTabbarView;
+			sourceTree = "<group>";
+		};
 		82E4AFCF1CA2C3FB00B9D608 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +353,8 @@
 				82E4AFD11CA2C90C00B9D608 /* LXNetworkKit.m */,
 				82E4AFD31CA2CB8F00B9D608 /* LXNetworkKit+Login.h */,
 				82E4AFD41CA2CB8F00B9D608 /* LXNetworkKit+Login.m */,
+				8217BBF21CB9181A00C9F8C8 /* LXNetworkKit+Search.h */,
+				8217BBF31CB9181A00C9F8C8 /* LXNetworkKit+Search.m */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -292,6 +374,12 @@
 			children = (
 				82E4AFF01CA95DCC00B9D608 /* User.h */,
 				82E4AFF11CA95DCC00B9D608 /* User.m */,
+				82D086F01CBA0AF100ECB73B /* SearchResultModel.h */,
+				82D086F11CBA0AF100ECB73B /* SearchResultModel.m */,
+				82D086F61CBA226900ECB73B /* PathModel.h */,
+				82D086F71CBA226900ECB73B /* PathModel.m */,
+				82D086F31CBA0CF200ECB73B /* SubPathModel.h */,
+				82D086F41CBA0CF200ECB73B /* SubPathModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -438,22 +526,34 @@
 				82A43AFB1CB546EB0004B5EB /* HomePageViewModel.m in Sources */,
 				82A43AF11CB0F65E0004B5EB /* LXViewModel.m in Sources */,
 				8235E0661C9B9D9900DF8EA2 /* AppDelegate.m in Sources */,
+				82D087121CBA33FD00ECB73B /* DLFixedTabbarView.m in Sources */,
 				8235E0CB1C9FE30F00DF8EA2 /* ContactsViewModel.m in Sources */,
 				82E4AFF51CA9625400B9D608 /* ContactsTableViewController.m in Sources */,
+				82D086F81CBA226900ECB73B /* PathModel.m in Sources */,
 				8235E0631C9B9D9900DF8EA2 /* main.m in Sources */,
 				8235E0AD1C9BA2CD00DF8EA2 /* HomePageViewController.m in Sources */,
+				82D087141CBA33FD00ECB73B /* DLTabedSlideView.m in Sources */,
 				82E4AFC71CA2796A00B9D608 /* RegisterViewController.m in Sources */,
 				82E4AFEC1CA7AB4000B9D608 /* RegisterViewModel.m in Sources */,
+				8217BBF41CB9181A00C9F8C8 /* LXNetworkKit+Search.m in Sources */,
 				82E4AFF21CA95DCC00B9D608 /* User.m in Sources */,
+				82D087131CBA33FD00ECB73B /* DLScrollTabbarView.m in Sources */,
+				82D086F21CBA0AF100ECB73B /* SearchResultModel.m in Sources */,
 				82A43B0B1CB791590004B5EB /* TLCity.m in Sources */,
 				82E4AFD51CA2CB8F00B9D608 /* LXNetworkKit+Login.m in Sources */,
 				82A43B0F1CB791590004B5EB /* TLCityPickerSearchResultController.m in Sources */,
 				82A43B0D1CB791590004B5EB /* TLCityHeaderView.m in Sources */,
 				82A43B0C1CB791590004B5EB /* TLCityGroupCell.m in Sources */,
+				82D086F51CBA0CF200ECB73B /* SubPathModel.m in Sources */,
 				82A43AF51CB0F8F20004B5EB /* LXViewModelService.m in Sources */,
 				8235E0B01C9BA2EF00DF8EA2 /* FavourotePageViewController.m in Sources */,
+				82D086FB1CBA313D00ECB73B /* SearchResultViewController.m in Sources */,
+				82D087111CBA33FD00ECB73B /* DLSlideView.m in Sources */,
+				82D087151CBA33FD00ECB73B /* DLUtility.m in Sources */,
 				8235E0B31C9BA30400DF8EA2 /* ContactsPageViewController.m in Sources */,
+				82D0870F1CBA33FD00ECB73B /* DLLRUCache.m in Sources */,
 				82E4AFF91CA9686400B9D608 /* LXUtil.m in Sources */,
+				82D087101CBA33FD00ECB73B /* DLCustomSlideView.m in Sources */,
 				82A43B0E1CB791590004B5EB /* TLCityPickerController.m in Sources */,
 				82E4AFD21CA2C90C00B9D608 /* LXNetworkKit.m in Sources */,
 			);

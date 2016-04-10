@@ -25,7 +25,7 @@
     [super viewDidLoad];
     
     UIEdgeInsets insets = UIEdgeInsetsMake(0, 0, 49, 0);
-    self.tableView = [[UITableView alloc] init];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) style:UITableViewStyleGrouped];
     [self.view addSubview: self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view).with.insets(insets);
@@ -48,6 +48,10 @@
     return 100;
 }
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return [_dataSource count];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     //return [_dataSource count];
     return 1;
@@ -61,16 +65,16 @@
     SearchResultTableViewCell *cell = (SearchResultTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"SearchResultTableViewCell"];
     
     
-    cell.fromCityLabel.text = [_dataSource objectAtIndex:indexPath.row].startPath.fromCityName;
-    cell.middleCityLabel.text = [_dataSource objectAtIndex:indexPath.row].startPath.toCityName;
-    cell.toCityLabel.text = [_dataSource objectAtIndex:indexPath.row].middlePath.toCityName;
+    cell.fromCityLabel.text = [_dataSource objectAtIndex:indexPath.section].startPath.fromCityName;
+    cell.middleCityLabel.text = [_dataSource objectAtIndex:indexPath.section].startPath.toCityName;
+    cell.toCityLabel.text = [_dataSource objectAtIndex:indexPath.section].middlePath.toCityName;
     
-    cell.firstTrainNumberLabel.text = [_dataSource objectAtIndex:indexPath.row].startPath.trainno;
-    cell.enfTrainNumberLabel.text = [_dataSource objectAtIndex:indexPath.row].middlePath.trainno;
+    cell.firstTrainNumberLabel.text = [_dataSource objectAtIndex:indexPath.section].startPath.trainno;
+    cell.enfTrainNumberLabel.text = [_dataSource objectAtIndex:indexPath.section].middlePath.trainno;
     
-    cell.startTimeLabel.text = [_dataSource objectAtIndex:indexPath.row].startPath.startTime;
-    cell.middleTimeLabel.text = [_dataSource objectAtIndex:indexPath.row].startPath.endTime;
-    cell.endTimeLabel.text = [_dataSource objectAtIndex:indexPath.row].middlePath.endTime;
+    cell.startTimeLabel.text = [_dataSource objectAtIndex:indexPath.section].startPath.startTime;
+    cell.middleTimeLabel.text = [_dataSource objectAtIndex:indexPath.section].startPath.endTime;
+    cell.endTimeLabel.text = [_dataSource objectAtIndex:indexPath.section].middlePath.endTime;
     
     [cell layoutIfNeeded];
     [cell updateConstraintsIfNeeded];

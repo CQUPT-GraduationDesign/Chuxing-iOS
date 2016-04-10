@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PathModel.h"
 
 @interface SearchResultTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
-@property(nonatomic, strong) NSMutableArray *dataSource;
+@property(nonatomic, strong) NSMutableArray<PathModel *> *dataSource;
 
 @end

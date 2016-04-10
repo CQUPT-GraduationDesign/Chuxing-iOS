@@ -10,6 +10,16 @@
 
 @interface SearchResultTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *fromCityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *middleCityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *toCityLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *firstTrainNumberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *enfTrainNumberLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *startTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *middleTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *endTimeLabel;
 
 
 @end

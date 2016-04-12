@@ -9,6 +9,8 @@
 #import "SearchResultViewController.h"
 #import "SearchResultTableViewController.h"
 #import <Masonry/Masonry.h>
+#import "SearchResultTableViewModel.h"
+#import "LXNetworkKit+Search.h"
 
 @implementation SearchResultViewController
 
@@ -51,7 +53,12 @@
         case 0:
         {
             SearchResultTableViewController *ctrl = [[SearchResultTableViewController alloc] init];
-            ctrl.dataSource = self.dataSource;
+            SearchResultTableViewModel *viewModel = [[SearchResultTableViewModel alloc] init];
+            viewModel.dataSource = self.dataSource;
+            viewModel.fromCityID = self.fromCityID;
+            viewModel.toCityID = self.toCityID;
+            viewModel.type = SearchTypeDefault;
+            ctrl.viewModel = viewModel;
             
             return ctrl;
         }
@@ -59,16 +66,38 @@
         {
             SearchResultTableViewController *ctrl = [[SearchResultTableViewController alloc] init];
             
+            SearchResultTableViewModel *viewModel = [[SearchResultTableViewModel alloc] init];
+            viewModel.fromCityID = self.fromCityID;
+            viewModel.toCityID = self.toCityID;
+            viewModel.type = SearchTypeWhole;
+            ctrl.viewModel = viewModel;
+            
+            
             return ctrl;
         }
         case 2:
         {
             SearchResultTableViewController *ctrl = [[SearchResultTableViewController alloc] init];
+            
+            SearchResultTableViewModel *viewModel = [[SearchResultTableViewModel alloc] init];
+            viewModel.fromCityID = self.fromCityID;
+            viewModel.toCityID = self.toCityID;
+            viewModel.type = SearchTypeOnTrain;
+            ctrl.viewModel = viewModel;
+            
             return ctrl;
         }
         case 3:
         {
             SearchResultTableViewController *ctrl = [[SearchResultTableViewController alloc] init];
+            
+            SearchResultTableViewModel *viewModel = [[SearchResultTableViewModel alloc] init];
+            viewModel.fromCityID = self.fromCityID;
+            viewModel.toCityID = self.toCityID;
+            viewModel.type = SearchTypeTransfer;
+            ctrl.viewModel = viewModel;
+
+            
             return ctrl;
         }
             

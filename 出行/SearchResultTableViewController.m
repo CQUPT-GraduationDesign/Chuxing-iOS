@@ -9,10 +9,13 @@
 #import "SearchResultTableViewController.h"
 #import <Masonry/Masonry.h>
 #import "SearchResultTableViewCell.h"
+#import "MJRefresh.h"
 
 @interface SearchResultTableViewController()
 
 @property(nonatomic, strong) UITableView *tableView;
+
+
 
 @end
 
@@ -23,6 +26,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    if (!_viewModel.dataSource) {
+        [[self.viewModel.requestRemoteDataCommand execute:nil] subscribeCompleted:^{
+            [self.tableView reloadData];
+        }];
+    }
     
     UIEdgeInsets insets = UIEdgeInsetsMake(0, 0, 49, 0);
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) style:UITableViewStyleGrouped];
@@ -35,6 +44,23 @@
     self.tableView.dataSource = self;
     
     [self.tableView registerNib: [UINib nibWithNibName:@"SearchResultTableViewCell" bundle:nil] forCellReuseIdentifier:@"SearchResultTableViewCell"];
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        
+        self.viewModel.page = 0;
+        [[self.viewModel.requestRemoteDataCommand execute:nil] subscribeCompleted:^{
+            [self.tableView reloadData];
+            [self.tableView.mj_header endRefreshing];
+        }];
+    }];
+    
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        self.viewModel.page += 1;
+        [[self.viewModel.requestRemoteDataCommand execute:nil] subscribeCompleted:^{
+            
+            [self.tableView reloadData];
+            [self.tableView.mj_footer endRefreshing];
+        }];
+    }];
     
     
 }
@@ -49,7 +75,7 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [_dataSource count];
+    return [self.viewModel.dataSource count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -57,24 +83,32 @@
     return 1;
 }
 
-// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
-// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return 0.1;
+    }
+    return 5;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 5;
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     SearchResultTableViewCell *cell = (SearchResultTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"SearchResultTableViewCell"];
     
     
-    cell.fromCityLabel.text = [_dataSource objectAtIndex:indexPath.section].startPath.fromCityName;
-    cell.middleCityLabel.text = [_dataSource objectAtIndex:indexPath.section].startPath.toCityName;
-    cell.toCityLabel.text = [_dataSource objectAtIndex:indexPath.section].middlePath.toCityName;
+    cell.fromCityLabel.text = [_viewModel.dataSource objectAtIndex:indexPath.section].startPath.fromCityName;
+    cell.middleCityLabel.text = [_viewModel.dataSource objectAtIndex:indexPath.section].startPath.toCityName;
+    cell.toCityLabel.text = [_viewModel.dataSource objectAtIndex:indexPath.section].middlePath.toCityName;
     
-    cell.firstTrainNumberLabel.text = [_dataSource objectAtIndex:indexPath.section].startPath.trainno;
-    cell.enfTrainNumberLabel.text = [_dataSource objectAtIndex:indexPath.section].middlePath.trainno;
+    cell.firstTrainNumberLabel.text = [_viewModel.dataSource objectAtIndex:indexPath.section].startPath.trainno;
+    cell.enfTrainNumberLabel.text = [_viewModel.dataSource objectAtIndex:indexPath.section].middlePath.trainno;
     
-    cell.startTimeLabel.text = [_dataSource objectAtIndex:indexPath.section].startPath.startTime;
-    cell.middleTimeLabel.text = [_dataSource objectAtIndex:indexPath.section].startPath.endTime;
-    cell.endTimeLabel.text = [_dataSource objectAtIndex:indexPath.section].middlePath.endTime;
+    cell.startTimeLabel.text = [_viewModel.dataSource objectAtIndex:indexPath.section].startPath.startTime;
+    cell.middleTimeLabel.text = [_viewModel.dataSource objectAtIndex:indexPath.section].startPath.endTime;
+    cell.endTimeLabel.text = [_viewModel.dataSource objectAtIndex:indexPath.section].middlePath.endTime;
     
     [cell layoutIfNeeded];
     [cell updateConstraintsIfNeeded];

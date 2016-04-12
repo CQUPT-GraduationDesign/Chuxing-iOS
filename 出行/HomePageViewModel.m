@@ -75,7 +75,7 @@
     
     self.searchCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         
-        return [[[LXNetworkKit sharedInstance] searchWithFromCity:self.fromCity.cityID toCity:self.toCity.cityID withType:1 withPage:1 withCount: 20] filter:^BOOL(SearchResultModel *model) {
+        return [[[LXNetworkKit sharedInstance] searchWithFromCity:self.fromCity.cityID toCity:self.toCity.cityID withType:1 withPage:0 withCount: 20] filter:^BOOL(SearchResultModel *model) {
             
             return model != nil;
         }];

@@ -1,5 +1,6 @@
 platform :ios, '8.0'
 
+pod 'MJRefresh'
 pod 'Masonry'
 pod 'SDWebImage'
 pod 'SVProgressHUD'

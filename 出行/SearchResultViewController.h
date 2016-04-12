@@ -11,6 +11,9 @@
 
 @interface SearchResultViewController : UIViewController<DLTabedSlideViewDelegate>
 
+@property(nonatomic, copy) NSString *fromCityID;
+@property(nonatomic, copy) NSString *toCityID;
+
 @property(nonatomic, strong) NSMutableArray *dataSource;
 
 @property(nonatomic, strong) DLTabedSlideView *tabedSlideView;

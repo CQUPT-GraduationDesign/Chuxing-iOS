@@ -121,6 +121,8 @@
             // 跳转到搜索结果页面
             SearchResultViewController *view = [[SearchResultViewController alloc] init];
             view.dataSource = model.data;
+            view.fromCityID = self.viewModel.fromCity.cityID;
+            view.toCityID = self.viewModel.toCity.cityID;
             [self.navigationController pushViewController:view animated:YES];
         }];
     }];

@@ -32,6 +32,8 @@
 		82A43B0F1CB791590004B5EB /* TLCityPickerSearchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A43B091CB791580004B5EB /* TLCityPickerSearchResultController.m */; };
 		82AACDDB1CBA74FD00CD3FD2 /* SearchResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AACDD91CBA74FD00CD3FD2 /* SearchResultTableViewCell.m */; };
 		82AACDDC1CBA74FD00CD3FD2 /* SearchResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82AACDDA1CBA74FD00CD3FD2 /* SearchResultTableViewCell.xib */; };
+		82AACDDF1CBCC3FD00CD3FD2 /* SearchResultTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AACDDE1CBCC3FD00CD3FD2 /* SearchResultTableViewModel.m */; };
+		82AACDE81CBCC61400CD3FD2 /* LXTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AACDE71CBCC61400CD3FD2 /* LXTableViewModel.m */; };
 		82D086F21CBA0AF100ECB73B /* SearchResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D086F11CBA0AF100ECB73B /* SearchResultModel.m */; };
 		82D086F51CBA0CF200ECB73B /* SubPathModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D086F41CBA0CF200ECB73B /* SubPathModel.m */; };
 		82D086F81CBA226900ECB73B /* PathModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D086F71CBA226900ECB73B /* PathModel.m */; };
@@ -101,6 +103,10 @@
 		82AACDD81CBA74FD00CD3FD2 /* SearchResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultTableViewCell.h; sourceTree = "<group>"; };
 		82AACDD91CBA74FD00CD3FD2 /* SearchResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultTableViewCell.m; sourceTree = "<group>"; };
 		82AACDDA1CBA74FD00CD3FD2 /* SearchResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultTableViewCell.xib; sourceTree = "<group>"; };
+		82AACDDD1CBCC3FD00CD3FD2 /* SearchResultTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultTableViewModel.h; sourceTree = "<group>"; };
+		82AACDDE1CBCC3FD00CD3FD2 /* SearchResultTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultTableViewModel.m; sourceTree = "<group>"; };
+		82AACDE61CBCC61400CD3FD2 /* LXTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXTableViewModel.h; sourceTree = "<group>"; };
+		82AACDE71CBCC61400CD3FD2 /* LXTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTableViewModel.m; sourceTree = "<group>"; };
 		82D086F01CBA0AF100ECB73B /* SearchResultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultModel.h; sourceTree = "<group>"; };
 		82D086F11CBA0AF100ECB73B /* SearchResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultModel.m; sourceTree = "<group>"; };
 		82D086F31CBA0CF200ECB73B /* SubPathModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubPathModel.h; sourceTree = "<group>"; };
@@ -277,6 +283,8 @@
 			children = (
 				82A43AEF1CB0F65E0004B5EB /* LXViewModel.h */,
 				82A43AF01CB0F65E0004B5EB /* LXViewModel.m */,
+				82AACDE61CBCC61400CD3FD2 /* LXTableViewModel.h */,
+				82AACDE71CBCC61400CD3FD2 /* LXTableViewModel.m */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -286,6 +294,8 @@
 			children = (
 				82A43AF91CB546EB0004B5EB /* HomePageViewModel.h */,
 				82A43AFA1CB546EB0004B5EB /* HomePageViewModel.m */,
+				82AACDDD1CBCC3FD00CD3FD2 /* SearchResultTableViewModel.h */,
+				82AACDDE1CBCC3FD00CD3FD2 /* SearchResultTableViewModel.m */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -541,6 +551,7 @@
 				82A43AF11CB0F65E0004B5EB /* LXViewModel.m in Sources */,
 				8235E0661C9B9D9900DF8EA2 /* AppDelegate.m in Sources */,
 				82D087121CBA33FD00ECB73B /* DLFixedTabbarView.m in Sources */,
+				82AACDE81CBCC61400CD3FD2 /* LXTableViewModel.m in Sources */,
 				8235E0CB1C9FE30F00DF8EA2 /* ContactsViewModel.m in Sources */,
 				82E4AFF51CA9625400B9D608 /* ContactsTableViewController.m in Sources */,
 				82D086F81CBA226900ECB73B /* PathModel.m in Sources */,
@@ -549,6 +560,7 @@
 				82D087141CBA33FD00ECB73B /* DLTabedSlideView.m in Sources */,
 				82E4AFC71CA2796A00B9D608 /* RegisterViewController.m in Sources */,
 				82E4AFEC1CA7AB4000B9D608 /* RegisterViewModel.m in Sources */,
+				82AACDDF1CBCC3FD00CD3FD2 /* SearchResultTableViewModel.m in Sources */,
 				8217BBF41CB9181A00C9F8C8 /* LXNetworkKit+Search.m in Sources */,
 				82E4AFF21CA95DCC00B9D608 /* User.m in Sources */,
 				82D087131CBA33FD00ECB73B /* DLScrollTabbarView.m in Sources */,

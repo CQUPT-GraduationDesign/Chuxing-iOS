@@ -25,7 +25,7 @@
         [[AFHTTPSessionManager manager] POST:@"http://go.king-liu.net/api/index.php/search/train" parameters:dic progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             
             [SVProgressHUD dismiss];
-            NSLog(@"%@", responseObject);
+            //NSLog(@"%@", responseObject);
             
             // 转换json -> Model
             SearchResultModel *model = [SearchResultModel yy_modelWithJSON:responseObject];

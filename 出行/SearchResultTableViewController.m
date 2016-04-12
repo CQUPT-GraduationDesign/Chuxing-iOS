@@ -107,8 +107,11 @@
     cell.enfTrainNumberLabel.text = [_viewModel.dataSource objectAtIndex:indexPath.section].middlePath.trainno;
     
     cell.startTimeLabel.text = [_viewModel.dataSource objectAtIndex:indexPath.section].startPath.startTime;
-    cell.middleTimeLabel.text = [_viewModel.dataSource objectAtIndex:indexPath.section].startPath.endTime;
+    cell.middleTimeLabel.text = [NSString stringWithFormat:@"%@|%@", [_viewModel.dataSource objectAtIndex:indexPath.section].startPath.endTime, [_viewModel.dataSource objectAtIndex:indexPath.section].middlePath.startTime];
     cell.endTimeLabel.text = [_viewModel.dataSource objectAtIndex:indexPath.section].middlePath.endTime;
+    
+    cell.startDurationLabel.text = [NSString stringWithFormat:@"历时%@", [_viewModel.dataSource objectAtIndex:indexPath.section].startPath.duration];
+    cell.endDurationLabel.text = [NSString stringWithFormat:@"历时%@", [_viewModel.dataSource objectAtIndex:indexPath.section].middlePath.duration];
     
     [cell layoutIfNeeded];
     [cell updateConstraintsIfNeeded];

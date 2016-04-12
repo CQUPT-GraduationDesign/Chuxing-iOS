@@ -21,5 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *middleTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *endTimeLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *startDurationLabel;
+@property (weak, nonatomic) IBOutlet UILabel *endDurationLabel;
 
 @end

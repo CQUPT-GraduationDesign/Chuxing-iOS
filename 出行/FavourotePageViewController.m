@@ -7,8 +7,13 @@
 //
 
 #import "FavourotePageViewController.h"
+#import "FavouritePageTableViewModel.h"
 
 @interface FavourotePageViewController ()
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (nonatomic, strong) FavouritePageTableViewModel *viewModel;
 
 @end
 
@@ -17,6 +22,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isLogin"]) {
+        
+        // 登陆了
+        
+        
+        // 如果之前有数据就跳过
+        
+        // 没有数据就去请求
+        
+    } else {
+        
+        // 没登录就提示未登录，并且清空之前的数据
+        
+        
+        
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {

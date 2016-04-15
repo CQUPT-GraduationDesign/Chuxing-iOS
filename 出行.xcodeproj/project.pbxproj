@@ -20,6 +20,7 @@
 		8235E0B01C9BA2EF00DF8EA2 /* FavourotePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8235E0AF1C9BA2EF00DF8EA2 /* FavourotePageViewController.m */; };
 		8235E0B31C9BA30400DF8EA2 /* ContactsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8235E0B21C9BA30400DF8EA2 /* ContactsPageViewController.m */; };
 		8235E0CB1C9FE30F00DF8EA2 /* ContactsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8235E0CA1C9FE30F00DF8EA2 /* ContactsViewModel.m */; };
+		8241046F1CC0CADD007C9449 /* FavouritePageTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8241046E1CC0CADD007C9449 /* FavouritePageTableViewModel.m */; };
 		82A43AF11CB0F65E0004B5EB /* LXViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A43AF01CB0F65E0004B5EB /* LXViewModel.m */; };
 		82A43AF51CB0F8F20004B5EB /* LXViewModelService.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A43AF41CB0F8F20004B5EB /* LXViewModelService.m */; };
 		82A43AF71CB530ED0004B5EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82A43AF61CB530ED0004B5EB /* Assets.xcassets */; };
@@ -80,6 +81,8 @@
 		8235E0B21C9BA30400DF8EA2 /* ContactsPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsPageViewController.m; sourceTree = "<group>"; };
 		8235E0C91C9FE30F00DF8EA2 /* ContactsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsViewModel.h; sourceTree = "<group>"; };
 		8235E0CA1C9FE30F00DF8EA2 /* ContactsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsViewModel.m; sourceTree = "<group>"; };
+		8241046D1CC0CADD007C9449 /* FavouritePageTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavouritePageTableViewModel.h; sourceTree = "<group>"; };
+		8241046E1CC0CADD007C9449 /* FavouritePageTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavouritePageTableViewModel.m; sourceTree = "<group>"; };
 		82A43AEF1CB0F65E0004B5EB /* LXViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXViewModel.h; sourceTree = "<group>"; };
 		82A43AF01CB0F65E0004B5EB /* LXViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXViewModel.m; sourceTree = "<group>"; };
 		82A43AF21CB0F6EF0004B5EB /* LXNavigationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXNavigationProtocol.h; sourceTree = "<group>"; };
@@ -257,6 +260,7 @@
 		8235E0A91C9BA26D00DF8EA2 /* FavouritePageControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8241046C1CC0CA90007C9449 /* ViewModel */,
 				8235E0AE1C9BA2EF00DF8EA2 /* FavourotePageViewController.h */,
 				8235E0AF1C9BA2EF00DF8EA2 /* FavourotePageViewController.m */,
 			);
@@ -285,6 +289,15 @@
 				82A43AF01CB0F65E0004B5EB /* LXViewModel.m */,
 				82AACDE61CBCC61400CD3FD2 /* LXTableViewModel.h */,
 				82AACDE71CBCC61400CD3FD2 /* LXTableViewModel.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		8241046C1CC0CA90007C9449 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8241046D1CC0CADD007C9449 /* FavouritePageTableViewModel.h */,
+				8241046E1CC0CADD007C9449 /* FavouritePageTableViewModel.m */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -567,6 +580,7 @@
 				82D086F21CBA0AF100ECB73B /* SearchResultModel.m in Sources */,
 				82A43B0B1CB791590004B5EB /* TLCity.m in Sources */,
 				82E4AFD51CA2CB8F00B9D608 /* LXNetworkKit+Login.m in Sources */,
+				8241046F1CC0CADD007C9449 /* FavouritePageTableViewModel.m in Sources */,
 				82A43B0F1CB791590004B5EB /* TLCityPickerSearchResultController.m in Sources */,
 				82A43B0D1CB791590004B5EB /* TLCityHeaderView.m in Sources */,
 				82A43B0C1CB791590004B5EB /* TLCityGroupCell.m in Sources */,

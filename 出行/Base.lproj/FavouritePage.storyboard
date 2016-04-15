@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Favourote Page View Controller-->
@@ -16,10 +17,25 @@
                     <view key="view" contentMode="scaleToFill" id="qp2-2S-P5Q">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="94y-LS-Hr3">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="U49-9J-DBZ" firstAttribute="top" secondItem="94y-LS-Hr3" secondAttribute="bottom" id="AT6-OZ-Lzz"/>
+                            <constraint firstItem="94y-LS-Hr3" firstAttribute="leading" secondItem="qp2-2S-P5Q" secondAttribute="leading" id="chQ-jd-nhi"/>
+                            <constraint firstItem="94y-LS-Hr3" firstAttribute="top" secondItem="qp2-2S-P5Q" secondAttribute="topMargin" id="fvy-cX-EIv"/>
+                            <constraint firstAttribute="trailing" secondItem="94y-LS-Hr3" secondAttribute="trailing" id="yyU-Jc-jrj"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="9Cq-cc-zVY"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="94y-LS-Hr3" id="XR0-Bk-t72"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RwZ-kL-sxh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

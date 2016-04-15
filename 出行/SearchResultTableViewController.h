@@ -14,6 +14,5 @@
 @interface SearchResultTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property(nonatomic, strong) SearchResultTableViewModel *viewModel;
-//@property(nonatomic, strong) NSMutableArray<PathModel *> *dataSource;
 
 @end

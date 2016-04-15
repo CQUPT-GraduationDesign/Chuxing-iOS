@@ -17,4 +17,7 @@
 
 @property(nonatomic, assign) SearchType type;
 
+
+@property(nonatomic, strong) RACCommand *likeCommand;
+
 @end

@@ -115,8 +115,40 @@
     
     [cell layoutIfNeeded];
     [cell updateConstraintsIfNeeded];
+
+    
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(cellDidLongPressed)];
+    
+    [cell removeGestureRecognizer:longPress];
+    
+    [cell addGestureRecognizer:longPress];
     
     return cell;
+}
+
+- (void)cellDidLongPressed {
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"更多" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"收藏" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [[self.viewModel.likeCommand execute:nil] subscribeCompleted:^{
+            // 请求接口回来提示用户
+            
+        }];
+    }];
+    
+    UIAlertAction *cancle = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
+    
+    
+    [alert addAction:action];
+    [alert addAction:cancle];
+    [self presentViewController:alert animated:YES completion:nil];
+    
+    //NSLog(@"ssss");
+    
 }
 
 

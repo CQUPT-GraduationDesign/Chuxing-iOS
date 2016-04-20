@@ -8,6 +8,7 @@
 
 #import "SearchResultTableViewModel.h"
 #import "SearchResultModel.h"
+#import "LXNetworkKit+Favourite.h"
 
 @interface SearchResultTableViewModel ()
 
@@ -45,6 +46,13 @@
             
             return model;
         }];
+    }];
+    
+    self.likeCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(NSNumber *pathID) {
+        
+        return [[LXNetworkKit sharedInstance] favouriteWithPathID:pathID.stringValue];
+        
+        
     }];
     
 }

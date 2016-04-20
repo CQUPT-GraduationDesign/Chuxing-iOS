@@ -117,22 +117,24 @@
     [cell updateConstraintsIfNeeded];
 
     
-    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(cellDidLongPressed)];
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(cellDidLongPressed:)];
     
     [cell removeGestureRecognizer:longPress];
     
     [cell addGestureRecognizer:longPress];
+    longPress.view.tag = [_viewModel.dataSource objectAtIndex:[indexPath section]].pathID.integerValue;
+
     
     return cell;
 }
 
-- (void)cellDidLongPressed {
+- (void)cellDidLongPressed:(UILongPressGestureRecognizer *)sender {
     
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"更多" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
     
     
     UIAlertAction *action = [UIAlertAction actionWithTitle:@"收藏" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [[self.viewModel.likeCommand execute:nil] subscribeCompleted:^{
+        [[self.viewModel.likeCommand execute:[NSNumber numberWithInteger:sender.view.tag]] subscribeCompleted:^{
             // 请求接口回来提示用户
             
         }];

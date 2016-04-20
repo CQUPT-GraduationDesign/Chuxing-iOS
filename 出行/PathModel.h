@@ -12,6 +12,8 @@
 
 @interface PathModel : NSObject
 
+@property(nonatomic, strong) NSNumber *pathID;
+
 @property(nonatomic, copy) NSString *fromCityName;
 @property(nonatomic, copy) NSString *toCityName;
 

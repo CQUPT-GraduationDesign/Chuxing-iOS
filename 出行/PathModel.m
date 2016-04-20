@@ -14,7 +14,8 @@
     return @{@"fromCityName" : @"fromcityname",
              @"toCityName" : @"tocityname",
              @"startPath" : @"startData",
-             @"middlePath" : @"middleData"};
+             @"middlePath" : @"middleData",
+             @"pathID" : @"id"};
 }
 
 @end

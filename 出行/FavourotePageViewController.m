@@ -9,8 +9,13 @@
 #import "FavourotePageViewController.h"
 #import "FavouritePageTableViewModel.h"
 #import "LXUtil.h"
+#import "LXNetworkKit+Favourite.h"
+#import "SearchResultModel.h"
+#import "MapViewController.h"
+#import "SearchResultTableViewCell.h"
 
-@interface FavourotePageViewController ()
+@interface FavourotePageViewController () <UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UIView *blankView;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -24,6 +29,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    _viewModel = [[FavouritePageTableViewModel alloc] init];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.tableView.backgroundColor = [UIColor whiteColor];
+    
+    self.tableView.hidden = YES;
+    self.blankView.hidden = YES;
+    
+    [self.tableView registerNib: [UINib nibWithNibName:@"SearchResultTableViewCell" bundle:nil] forCellReuseIdentifier:@"SearchResultTableViewCell"];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
     
 }
 
@@ -34,34 +50,113 @@
         
         // 登陆了
         
-        
         // 如果之前有数据就跳过
+        if (_viewModel.dataSource) {
+            
+            
+        } else {
+            // 没有数据就去请求
+            
+            [[self.viewModel.requestRemoteDataCommand execute:nil] subscribeCompleted:^{
+                [self.tableView reloadData];
+                
+                [self isShowBlankView:NO];
+
+            }];   
+        }
         
-        // 没有数据就去请求
+        
+        
         
     } else {
         
         // 没登录就提示未登录，并且清空之前的数据
         
-        
+        [self isShowBlankView:YES];
+        _viewModel.dataSource = nil;
         
     }
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - UITableViewDelegate & UITableViewDataSource
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 100;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return [self.viewModel.dataSource count];
 }
-*/
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    //return [_dataSource count];
+    return 1;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return 0.1;
+    }
+    return 5;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 5;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    MapViewController *mapView = [[MapViewController alloc] init];
+    mapView.start = [_viewModel.dataSource objectAtIndex:indexPath.section].fromCityName;
+    mapView.middle = [_viewModel.dataSource objectAtIndex:indexPath.section].startPath.toCityName;
+    mapView.end = [_viewModel.dataSource objectAtIndex:indexPath.section].toCityName;
+    
+    [self.navigationController pushViewController:mapView animated:YES];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    SearchResultTableViewCell *cell = (SearchResultTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"SearchResultTableViewCell"];
+    
+    
+    cell.fromCityLabel.text = [_viewModel.dataSource objectAtIndex:indexPath.section].startPath.fromCityName;
+    cell.middleCityLabel.text = [_viewModel.dataSource objectAtIndex:indexPath.section].startPath.toCityName;
+    cell.toCityLabel.text = [_viewModel.dataSource objectAtIndex:indexPath.section].middlePath.toCityName;
+    
+    cell.firstTrainNumberLabel.text = [_viewModel.dataSource objectAtIndex:indexPath.section].startPath.trainno;
+    cell.enfTrainNumberLabel.text = [_viewModel.dataSource objectAtIndex:indexPath.section].middlePath.trainno;
+    
+    cell.startTimeLabel.text = [_viewModel.dataSource objectAtIndex:indexPath.section].startPath.startTime;
+    cell.middleTimeLabel.text = [NSString stringWithFormat:@"%@|%@", [_viewModel.dataSource objectAtIndex:indexPath.section].startPath.endTime, [_viewModel.dataSource objectAtIndex:indexPath.section].middlePath.startTime];
+    cell.endTimeLabel.text = [_viewModel.dataSource objectAtIndex:indexPath.section].middlePath.endTime;
+    
+    cell.startDurationLabel.text = [NSString stringWithFormat:@"历时%@", [_viewModel.dataSource objectAtIndex:indexPath.section].startPath.duration];
+    cell.endDurationLabel.text = [NSString stringWithFormat:@"历时%@", [_viewModel.dataSource objectAtIndex:indexPath.section].middlePath.duration];
+    cell.waitingDurationLabel.text = [NSString stringWithFormat:@"等待%@", [LXUtil transferSecondsToString: [_viewModel.dataSource objectAtIndex:indexPath.section].transferSeconds]];
+    
+    
+    [cell layoutIfNeeded];
+    [cell updateConstraintsIfNeeded];
+    
+    
+    return cell;
+}
+
+- (void)isShowBlankView:(BOOL)show {
+    
+    if (show) {
+        self.blankView.hidden = NO;
+        self.tableView.hidden = YES;
+    } else {
+        self.blankView.hidden = YES;
+        self.tableView.hidden = NO;
+    }
+    
+    
+    
+}
 
 @end

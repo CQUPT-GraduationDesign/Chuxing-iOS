@@ -14,5 +14,7 @@
 
 - (RACSignal *)favouriteWithPathID:(NSString *)pathID;
 
+- (RACSignal *)fetchFavouriteList;
+
 
 @end

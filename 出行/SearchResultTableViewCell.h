@@ -23,5 +23,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *startDurationLabel;
 @property (weak, nonatomic) IBOutlet UILabel *endDurationLabel;
+@property (weak, nonatomic) IBOutlet UILabel *waitingDurationLabel;
 
 @end

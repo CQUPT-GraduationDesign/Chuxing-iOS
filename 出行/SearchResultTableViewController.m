@@ -10,6 +10,7 @@
 #import <Masonry/Masonry.h>
 #import "SearchResultTableViewCell.h"
 #import "MJRefresh.h"
+#import "LXUtil.h"
 
 @interface SearchResultTableViewController()
 
@@ -112,6 +113,8 @@
     
     cell.startDurationLabel.text = [NSString stringWithFormat:@"历时%@", [_viewModel.dataSource objectAtIndex:indexPath.section].startPath.duration];
     cell.endDurationLabel.text = [NSString stringWithFormat:@"历时%@", [_viewModel.dataSource objectAtIndex:indexPath.section].middlePath.duration];
+    cell.waitingDurationLabel.text = [NSString stringWithFormat:@"等待%@", [LXUtil transferSecondsToString: [_viewModel.dataSource objectAtIndex:indexPath.section].transferSeconds]];
+    
     
     [cell layoutIfNeeded];
     [cell updateConstraintsIfNeeded];

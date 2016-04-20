@@ -116,4 +116,26 @@
 }
 
 
++ (NSString *)transferSecondsToString:(NSTimeInterval)seconds {
+    
+    if (seconds < 60) {
+        // 1分钟之内
+        return [NSString stringWithFormat:@"%.lf秒", seconds];
+    } else if (seconds < 60 * 60) {
+        // 一小时之内
+        int min = seconds / 60;
+        return [NSString stringWithFormat:@"%d分钟", min];
+    } else if (seconds < 60 * 60 * 60) {
+        // 1天之内
+        int hour = seconds / 60 / 60;
+        int min = (seconds - (hour * 60 * 60)) / 60;
+//        /double second = seconds - (min * 60) - (hour * 60 * 60);
+        return [NSString stringWithFormat:@"%d小时%d分钟", hour, min];
+    }
+    
+    return @"一天以上";
+    
+}
+
+
 @end

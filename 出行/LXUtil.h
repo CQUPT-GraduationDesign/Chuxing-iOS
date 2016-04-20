@@ -19,4 +19,6 @@
 
 + (NSString *)getCurrentCityID;
 
++ (NSString *)transferSecondsToString:(NSTimeInterval)seconds;
+
 @end

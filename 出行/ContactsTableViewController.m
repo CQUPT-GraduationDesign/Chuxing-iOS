@@ -108,6 +108,21 @@
         
     }
     
+    if ([indexPath section] == 1) {
+
+        
+        if ([indexPath row] == 0) { // 查看收藏
+            [self.tabBarController setSelectedIndex:1];
+        }
+        
+        if ([indexPath row] == 1) { // 关于我们
+            
+        }
+        
+    }
+    
+
+    
 }
 
 

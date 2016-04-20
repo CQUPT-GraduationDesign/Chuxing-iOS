@@ -22,6 +22,7 @@
 		8235E0CB1C9FE30F00DF8EA2 /* ContactsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8235E0CA1C9FE30F00DF8EA2 /* ContactsViewModel.m */; };
 		8241046F1CC0CADD007C9449 /* FavouritePageTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8241046E1CC0CADD007C9449 /* FavouritePageTableViewModel.m */; };
 		824104721CC720B4007C9449 /* LXNetworkKit+Favourite.m in Sources */ = {isa = PBXBuildFile; fileRef = 824104711CC720B4007C9449 /* LXNetworkKit+Favourite.m */; };
+		8241047A1CC7AEE5007C9449 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 824104791CC7AEE5007C9449 /* MapViewController.m */; };
 		82A43AF11CB0F65E0004B5EB /* LXViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A43AF01CB0F65E0004B5EB /* LXViewModel.m */; };
 		82A43AF51CB0F8F20004B5EB /* LXViewModelService.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A43AF41CB0F8F20004B5EB /* LXViewModelService.m */; };
 		82A43AF71CB530ED0004B5EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82A43AF61CB530ED0004B5EB /* Assets.xcassets */; };
@@ -86,6 +87,8 @@
 		8241046E1CC0CADD007C9449 /* FavouritePageTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavouritePageTableViewModel.m; sourceTree = "<group>"; };
 		824104701CC720B4007C9449 /* LXNetworkKit+Favourite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LXNetworkKit+Favourite.h"; sourceTree = "<group>"; };
 		824104711CC720B4007C9449 /* LXNetworkKit+Favourite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LXNetworkKit+Favourite.m"; sourceTree = "<group>"; };
+		824104781CC7AEE5007C9449 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		824104791CC7AEE5007C9449 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		82A43AEF1CB0F65E0004B5EB /* LXViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXViewModel.h; sourceTree = "<group>"; };
 		82A43AF01CB0F65E0004B5EB /* LXViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXViewModel.m; sourceTree = "<group>"; };
 		82A43AF21CB0F6EF0004B5EB /* LXNavigationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXNavigationProtocol.h; sourceTree = "<group>"; };
@@ -256,6 +259,8 @@
 				82AACDD81CBA74FD00CD3FD2 /* SearchResultTableViewCell.h */,
 				82AACDD91CBA74FD00CD3FD2 /* SearchResultTableViewCell.m */,
 				82AACDDA1CBA74FD00CD3FD2 /* SearchResultTableViewCell.xib */,
+				824104781CC7AEE5007C9449 /* MapViewController.h */,
+				824104791CC7AEE5007C9449 /* MapViewController.m */,
 			);
 			name = HomePageViewControllers;
 			sourceTree = "<group>";
@@ -592,6 +597,7 @@
 				82A43B0C1CB791590004B5EB /* TLCityGroupCell.m in Sources */,
 				82D086F51CBA0CF200ECB73B /* SubPathModel.m in Sources */,
 				82A43AF51CB0F8F20004B5EB /* LXViewModelService.m in Sources */,
+				8241047A1CC7AEE5007C9449 /* MapViewController.m in Sources */,
 				8235E0B01C9BA2EF00DF8EA2 /* FavourotePageViewController.m in Sources */,
 				82D086FB1CBA313D00ECB73B /* SearchResultViewController.m in Sources */,
 				82D087111CBA33FD00ECB73B /* DLSlideView.m in Sources */,

@@ -137,5 +137,17 @@
     
 }
 
++ (NSString *)getWebviewStringWithStartCity:(NSString *)start middle:(NSString *)middle end:(NSString *)end {
+    
+    NSString *path = @"http://go.king-liu.net/ios-webview/index.html";
+    start = [start stringByAddingPercentEncodingWithAllowedCharacters: [NSCharacterSet alphanumericCharacterSet]];
+    middle = [middle stringByAddingPercentEncodingWithAllowedCharacters: [NSCharacterSet alphanumericCharacterSet]];
+    end = [end stringByAddingPercentEncodingWithAllowedCharacters: [NSCharacterSet alphanumericCharacterSet]];
+    path = [path stringByAppendingString: [NSString stringWithFormat:@"?start=%@&middle=%@&end=%@", start , middle, end]];
+    
+    return path;
+    
+}
+
 
 @end

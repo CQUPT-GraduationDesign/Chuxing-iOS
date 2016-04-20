@@ -11,6 +11,7 @@
 #import "SearchResultTableViewCell.h"
 #import "MJRefresh.h"
 #import "LXUtil.h"
+#import "MapViewController.h"
 
 @interface SearchResultTableViewController()
 
@@ -94,6 +95,17 @@
     return 5;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    MapViewController *mapView = [[MapViewController alloc] init];
+    mapView.start = [_viewModel.dataSource objectAtIndex:indexPath.section].fromCityName;
+    mapView.middle = [_viewModel.dataSource objectAtIndex:indexPath.section].startPath.toCityName;
+    mapView.end = [_viewModel.dataSource objectAtIndex:indexPath.section].toCityName;
+    
+    [self.navigationController pushViewController:mapView animated:YES];
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     

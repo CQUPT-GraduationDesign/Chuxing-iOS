@@ -8,6 +8,7 @@
 
 #import "FavourotePageViewController.h"
 #import "FavouritePageTableViewModel.h"
+#import "LXUtil.h"
 
 @interface FavourotePageViewController ()
 
@@ -22,6 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {

@@ -21,4 +21,6 @@
 
 + (NSString *)transferSecondsToString:(NSTimeInterval)seconds;
 
++ (NSString *)getWebviewStringWithStartCity:(NSString *)start middle:(NSString *)middle end:(NSString *)end;
+
 @end

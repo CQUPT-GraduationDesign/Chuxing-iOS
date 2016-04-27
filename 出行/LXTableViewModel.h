@@ -11,7 +11,7 @@
 
 @interface LXTableViewModel : LXViewModel
 
-@property(nonatomic, copy) NSArray<PathModel *> *dataSource;
+@property(nonatomic, copy) NSMutableArray<PathModel *> *dataSource;
 
 @property(nonatomic, assign) NSInteger page;
 @property(nonatomic, assign) NSInteger perPage;

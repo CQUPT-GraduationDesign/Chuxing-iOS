@@ -41,7 +41,7 @@
             if (self.page == 0) {
                 self.dataSource = model.data;
             } else {
-                self.dataSource = [self.dataSource arrayByAddingObjectsFromArray:model.data];
+                self.dataSource = [[self.dataSource arrayByAddingObjectsFromArray:model.data] mutableCopy];
             }
             
             return model;

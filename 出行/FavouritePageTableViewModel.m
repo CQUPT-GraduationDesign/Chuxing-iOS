@@ -39,9 +39,9 @@
             return model != nil;
         }] map:^id(SearchResultModel *model) {
             if (self.page == 0) {
-                self.dataSource = model.data;
+                self.dataSource = (NSMutableArray *)[model.data mutableCopy];
             } else {
-                self.dataSource = [self.dataSource arrayByAddingObjectsFromArray:model.data];
+                self.dataSource = [[self.dataSource arrayByAddingObjectsFromArray:model.data] mutableCopy];
             }
             
             return model;

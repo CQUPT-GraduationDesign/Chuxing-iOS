@@ -13,6 +13,7 @@
 #import "SearchResultModel.h"
 #import "MapViewController.h"
 #import "SearchResultTableViewCell.h"
+#import "MJRefresh.h"
 
 @interface FavourotePageViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *blankView;
@@ -40,6 +41,14 @@
     [self.tableView registerNib: [UINib nibWithNibName:@"SearchResultTableViewCell" bundle:nil] forCellReuseIdentifier:@"SearchResultTableViewCell"];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        
+        [[self.viewModel.requestRemoteDataCommand execute:nil] subscribeCompleted:^{
+            [self.tableView reloadData];
+            [self.tableView.mj_header endRefreshing];
+        }];
+    }];
     
 }
 
@@ -143,6 +152,29 @@
     
     
     return cell;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        NSMutableArray *mutable = [self.viewModel.dataSource mutableCopy];
+        [mutable removeObjectAtIndex:indexPath.row];
+        self.viewModel.dataSource = mutable;
+        
+        //[self.viewModel.dataSource removeObjectAtIndex:indexPath.row];
+        // Delete the row from the data source.
+        //[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [tableView deleteSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationFade];
+        
+    }
+    else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+    }
 }
 
 - (void)isShowBlankView:(BOOL)show {
